@@ -1,0 +1,103 @@
+#map, #legend {
+  float:left;
+  margin-left:-20px;
+  margin-right:10px;
+}
+
+
+#map{
+  shape-outside: polygon(100% 0, 95% 20%, 90% 30%, 85% 40%, 88% 50%, 80% 90%, 85% 100%, 0 100%, 0 0);
+}
+
+@media and screen (max-width:767px){
+  #map, #legend{
+	float:none;
+  }
+}
+
+.svg-map-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: left;
+    overflow: hidden;
+}
+
+.svg-legend-container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    padding-top:50%; /* aspect ratio */
+    vertical-align: left;
+    overflow: hidden;
+}
+
+@media and screen (min-width:767px){
+  .svg-map-container{
+	width:200px;
+  }
+}
+
+.land {
+  fill: #cccccc;
+}
+
+.county-boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+.state-boundary {
+  fill: none;
+  stroke: #fff;
+}
+
+.tooltip{
+  pointer-events: none;
+}
+
+
+#legend-label{
+  font-family:Helvetica;
+  margin-left:8%;
+}
+
+#radio-options {
+  font-family:Helvetica;
+  font-size:1em;
+  font-weight:200;
+  padding:0% 0% 3% 8%;
+}
+
+
+#pullquote{
+  margin-left:20px;
+}
+
+#msg, #msg2{
+  width:20%;
+  float:right;
+  font-family:Bookman Bold;
+  font-size:1.7em;
+  margin:5px 0px 5px 10px;
+}
+
+#msg2{
+  display:none;
+}
+
+
+/*VANILLA JS CODE FOR FADE-IN ON PULL QUOTE
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1s ease-in 1 forwards;
+}*/
+

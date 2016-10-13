@@ -1,0 +1,131 @@
+
+/*THE INTERVIEW AUDIO TABLE*/
+#interviews-header{
+  font-size:1.1em;
+  height:300px;
+  font-family:Bookman Bold;
+}
+
+.quote-icon{
+   height:70px;
+   width:100px;
+   float:left;
+}
+
+#default-quote{
+    font-size:3em;
+    font-family:Bookman;
+    font-weight:700;
+}
+
+/*Add a fade-in/fade-out on the pull quotes...this is glitchy*/
+
+.animate{
+    font-size:1.em;
+    -webkit-transition:linear .2s;
+    -moz-transition:linear .2s;
+    -ms-transition:linear .2s;
+    -o-transition:linear .2s;
+    transition:linear .2s;
+}
+
+.animate.ng-enter{
+    opacity:0;
+}
+
+.animate.ng-enter-active{
+    transition:linear .2s;
+    opacity:1;
+}
+
+.animate.ng-leave{
+    opacity:1;
+}
+
+.animate.ng-leave-active{
+    transition:linear .2s;
+    opacity:0;
+}
+
+.table-content{
+    height:500px;
+    overflow-y:scroll;
+    padding-right:5%;
+}
+
+@media and screen (max-width:767px){
+  .table-content{
+   display:none!important;
+  }
+}
+
+/*VANILLA JS CODE FOR FADE-OUT ON DEFAULT INTRO PULL QUOTE*/
+@keyframes fadeOut {
+  to {
+    display: none;
+  }
+}
+
+.fade-out {
+  display:none;
+  animation: fadeOut .5s linear;
+}
+
+.interviews-search{
+  float:right;
+  width:50%;
+}
+
+
+.pdf-icon {
+    width:20px;
+    height:20px;
+}
+
+
+#interviews-article, #interviews-header {
+    padding-left:5%;
+}
+
+#interviews-header, .table-content{
+  margin-top:5%;
+}
+
+#interviews-article{
+  padding-right:5%;
+  float:left;
+}
+
+.test{
+    font-size:5em;
+    font-family:Bookman;
+}
+
+audio {
+    zoom:0.7;
+}
+
+#kiss{
+  padding-top:5%;
+  width:85%;
+}
+
+      .a {
+        fill: none;
+      }
+
+      .b {
+        opacity: 0.4;
+      }
+
+      .c {
+        fill: #e0e0df;
+      }
+
+      .d {
+        opacity: 0.8;
+      }
+
+      .e {
+        fill: #f3f3f2;
+      }

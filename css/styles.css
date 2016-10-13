@@ -1,0 +1,44 @@
+
+#big-letter {
+    float:left;
+    font-size:25em;
+    font-family:Garamond;
+    line-height:60%;
+}
+
+@media screen and (max-width: 767px)  {
+   #big-letter{
+        font-size:14em;
+    }
+}
+
+#lead{
+    font-size:2em;
+}
+
+@media screen and (max-width: 767px)  {
+   #lead{
+        font-size:1.7em;
+    }
+}
+
+.article-text{
+	font-family:Helvetica;
+	font-weight:200;
+	font-size:1em;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: left;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
