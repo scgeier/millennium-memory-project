@@ -27,6 +27,7 @@ var svg = d3.select("#chart")
     //responsive SVG needs these 2 attributes and no width and height attr
     .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("viewBox", "0 0 738 400")
+    .attr("class", "scatterplot-diagram")
    //class to make it responsive
     .classed("svg-content-responsive", true)
   .append("g")

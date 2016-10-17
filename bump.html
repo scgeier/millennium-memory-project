@@ -28,14 +28,22 @@
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--<script>
-$(document).ready(function(){
-    console.log("DOM ready!");
-   $("svg.dot").click(function() {
-         $("#article-intro").fadeToggle(200);
+<script>
+ $(document).ready(function(){
+ //Don't use the responsive SVG canvases in iPad landscape and desktop viewports//
+   var w = "";
+   $(document).ready(function(){
+     w = $(window).width();
+     console.log(w);
+     if(w > 767){
+       $("#chart").removeClass("svg-scatterplot-container");
+       $(".scatterplot-diagram").removeClass("svg-content-responsive");
+       $(".scatterplot-diagram").width(768);
+       $(".scatterplot-diagram").height(400);
+     }
 });
- });
-</script>-->
+   });
+</script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="js/bump.js"></script>
 </body>

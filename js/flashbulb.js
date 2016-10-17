@@ -104,10 +104,10 @@ var svg = d3.select("#unilevel-partition")
  //responsive SVG needs these 2 attributes and no width and height attr
     .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("viewBox", "0 0 448 400")
+    .attr("class", "doughnut")
 //class to make it responsive
    .classed("svg-content-responsive", true)
   .append("g")
-     .attr("class", "doughnut")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 	

@@ -162,6 +162,7 @@ function mouseout(d){
 
 //Education chart
 var svg = d3.select("#eduChart").append("svg").attr("width", 645).attr("height", 480);
+            
 var g = svg.append("g").attr("transform","translate(200,50)");
 
 var bp2=viz.bP()

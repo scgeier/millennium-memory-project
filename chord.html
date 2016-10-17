@@ -12,14 +12,13 @@
 
 <div class="container">
   <div id="chart-area">
-    <form id="radio-options">
-     <input id="education-button" type="radio" name="demographic" value="education" checked>   Education<input id="religion-button" type="radio" name="demographic" value="religion">   Religion
-     <input id="politics-button" type="radio" name="demographic" value="politics">   Politics
-    </form>
- <!--<div id="religionChart"></div>!-->
   <div id="eduChart"></div>
   <iframe src="religion.html" id="religionChart"></iframe>
   <iframe src="politics.html" id="politicsChart"></iframe>
+  <form id="radio-options">
+     <input id="education-button" type="radio" name="demographic" value="education" checked>   Education<input id="religion-button" type="radio" name="demographic" value="religion">   Religion
+     <input id="politics-button" type="radio" name="demographic" value="politics">   Politics
+    </form>
 </div>
 
 <div class="article">
@@ -96,35 +95,8 @@ For this section of the research, I had to exclude people who were underage at t
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--<script>
-$(document).ready(function(){
-    console.log("DOM ready!");
-   $("svg.dot").click(function() {
-         $("#article-intro").fadeToggle(200);
-});
- });
-</script>-->
 <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="http://vizjs.org/viz.v1.1.1.min.js"></script>
 <script src="js/chord.js"></script>
-<script>
- /*$(document).ready(function(){
- //Don't use the responsive SVG canvases in iPad landscape and desktop viewports//
-   var w = "";
-   $(document).ready(function(){
-     w = $(window).width();
-     console.log(w);
-     if(w > 767){
-       $("#map").removeClass("svg-map-container");
-       $("#legend").removeClass("svg-legend-container");
-       $("svg").removeClass("svg-content-responsive");
-       $("svg").width(768);
-       $("svg").height(400);
-     }
-
-});
-
- });*/
-</script>
 </body>
 </html>

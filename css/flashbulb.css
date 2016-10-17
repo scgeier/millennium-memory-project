@@ -7,19 +7,12 @@
 	border-radius:0 220px 220px 0;
 }*/
 
-body{
-		background:yellow;
-		overflow-x:hidden!important;
-}
-.container{
-		background:#ccc;
-}
 
 #unilevel-partition {
 		color: white;
 		font-family: sans-serif;
 		shape-outside: circle(50%);
-		margin:-200px;
+		margin:-50px;
 		float:left;
 		/*position:absolute;
 		top:350px;
@@ -28,7 +21,7 @@ body{
 	}
 
 /*THIS IS WHERE I'LL NEED TO CREATE THE MOBILE LAYOUT*/
-@media screen and (max-width: 767px)  {
+@media only screen and (max-width: 767px)  {
    #unilevel-partition{
 	   float:none;
 	   margin:0;
@@ -44,8 +37,13 @@ body{
 	color:black;
 	font-size:0.7em;
 	position:absolute;
-	bottom:30%;
-	left:10%;
+	bottom:50%;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1024px)  {
+   #instructions{
+	   	bottom:68%;
+    }
 }
 
 #pull-quote{
