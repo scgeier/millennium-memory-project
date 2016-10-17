@@ -8,9 +8,19 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 <link rel="stylesheet" type="text/css" href="css/chord.css"/>
  </head>
-  <body>
+<body>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="intro.html">Introduction</a>
+  <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+  <a href="bump.html">The Reminiscence Bump</a>
+  <a href="map.html">Where We Were</a>
+  <a href="chord.html">Who We Were With</a>
+  <a href="interviews.html">What We Remember</a>
+</div>
+<span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 
-<div class="container">
+<div class="container" id="page-content">
   <div id="chart-area">
   <div id="eduChart"></div>
   <iframe src="religion.html" id="religionChart"></iframe>
@@ -89,14 +99,38 @@
   <text class="f" transform="translate(19.12 63.18)">z</text>
 </svg>
 For this section of the research, I had to exclude people who were underage at the turn of the millennium, since they had little say as to whom they were with at the moment (i.e. they were at home with their parents and siblings, and this would have skewed the results). And of course, the question had to be focused on people who remember the night well enough to remember their company. As a result, the pool of responses for this chord diagram was relatively small (n = 71), and the results require a grain or two of salt.<br><br>Nonetheless, there were some interesting patterns. Hover over the columns in the chart to explore.<br><br>Only seven percent of respondents were among strangers on New Year's Eve 1999. These people were like me -- they were at a large party, or a bar, or public gathering (or if they were at home, they had a party big enough that some strangers rolled in). Of that group, a disproportionate number --- 55 percent -- have only a high school education. People with a bachelor's degree make up the lion's share of the group that was with their parents (69 percent). Atheists were also more likely to be with a parent that night; they made up only 17 percent of the overall pool but 46 percent of the group that was with mom or dad.<br><br>Republicans were more likely to be with their spouses and children (they were only 22 percent of the overall respondents, but more than 40 percent of the spouse and kids connection). And the people out in public or at a big party (i.e. the ones among strangers)? They were overwhelmingly Democrats and Independents.</p>
-<a href="interviews.html">Next</a>
 </div>
 </div>
+
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-1 page-number">
+    <h6>5<span class="pipe">|</span></h6>
+   </div>
+   <div class="col-xs-10 project-title">
+    <h6>Millennium Memory Project</h6>
+   </div>
+   <div class="col-xs-1 next-page">
+    <a href="interviews.html">▶︎</a>
+   </div>
+  </div>
+ </div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="http://vizjs.org/viz.v1.1.1.min.js"></script>
 <script src="js/chord.js"></script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("page-content").style.opacity = "0.1";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+}
+</script>
 </body>
 </html>

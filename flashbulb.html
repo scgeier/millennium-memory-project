@@ -12,11 +12,22 @@
 </head>
 
 <body>
-<div class="container">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="intro.html">Introduction</a>
+  <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+  <a href="bump.html">The Reminiscence Bump</a>
+  <a href="map.html">Where We Were</a>
+  <a href="chord.html">Who We Were With</a>
+  <a href="interviews.html">What We Remember</a>
+</div>
+<span class="hamburger" id="navbutton"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+
+<div class="container" id="page-content">
  <div id="unilevel-partition" class="svg-container"></div>
   <p id="instructions">Click the ring sections to zoom in and <br>see a breakdown by gender, race and marital status<br>Click the center dot to zoom back out</p>
-    <h2>Flashbulb Memory and the Turn of the Millennium</h2>
-    <p class="article-text">A quick caveat before we begin: the next few pages are going to be chock-full of numbers. In particular, statistics. And to paraphrase Benjamin Disraeli, statistics rank third in the hierarchy of truth, just below damned lies. If you’re one to split statistical hairs (and if you one to split hairs on anything, it should be statistics), then please read about my <a href="#">Methods and Limitations</a> before moving on.<br></br>So with full disclosure out of the way, let’s get to the main question. How many people vividly remember the night of December 31, 1999? The chart to your left shows the answer: 68 percent. This number seems remarkably high or low, depending on how you look at it. On the one hand, it’s been 17 years since that night; it’s impressive that more than two-thirds of people still have it etched in their minds. <span id="pull-quote">Two out of three people have a detailed memory from New Year's Eve 1999</span>On the other hand, that moment was about as momentous as you can get (it was the de facto start of a new millennium), and it was loaded with the possibility that the global infrastructure would collapse because of the Y2K bug; it’s remarkable that 32 percent of people have forgotten it.</br><br>The results also revealed some interesting demographic patterns. African-Americans’ memories of New Year’s Eve 1999 were 27 percent more vivid than the average (they scored an average 12.5 on the survey, compared to the overall average of 9.86). Asian-Americans sat on the other end of the spectrum; their memory scores were 28 percent below the overall number.</br></br>It makes sense that Asian-Americans would have less vivid memories of December 31, 1999, considering that many of them celebrate the Chinese New Year on another date in the calendar. Tooltip: This became apparent when I surveyed a group of elderly Chinese immigrants at a senior center; their memories ranged from “non-existent” to “non-existent and confused.” It was like I was asking them about Arbor Day.</br></br>
+    <h2 class="headline">Flashbulb Memory and the Turn of the Millennium</h2>
+    <p class="article-text">A quick caveat before we begin: the next few pages are going to be chock-full of numbers. In particular, statistics. And to paraphrase Mark Twain, there are three kinds of dishonesty: lies, damned lies and statistics. If you’re one to split statistical hairs (and if you one to split hairs on anything, it should be statistics), then please read about my <span id="methods" onclick="showMethods()">Methods and Limitations</span> before moving on.<br></br>So with full disclosure out of the way, let’s get to the main question. How many people vividly remember the night of December 31, 1999? The chart to your left shows the answer: 68 percent. This number seems remarkably high or low, depending on how you look at it. On the one hand, it’s been 17 years since that night; it’s impressive that more than two-thirds of people still have it etched in their minds. <span id="pull-quote">Two out of three people have a detailed memory from New Year's Eve 1999</span>On the other hand, that moment was about as momentous as you can get (it was the de facto start of a new millennium), and it was loaded with the possibility that the global infrastructure would collapse because of the Y2K bug; it’s remarkable that 32 percent of people have forgotten it.</br><br>The results also revealed some interesting demographic patterns. African-Americans’ memories of New Year’s Eve 1999 were 27 percent more vivid than the average (they scored an average 12.5 on the survey, compared to the overall average of 9.86). Asian-Americans sat on the other end of the spectrum; their memory scores were 28 percent below the overall number.</br></br>It makes sense that Asian-Americans would have less vivid memories of December 31, 1999, considering that many of them celebrate the Chinese New Year on another date in the calendar. Tooltip: This became apparent when I surveyed a group of elderly Chinese immigrants at a senior center; their memories ranged from “non-existent” to “non-existent and confused.” It was like I was asking them about Arbor Day.</br></br>
 
 <svg id="fireworks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.85 259.79">
     <title>fireworks</title>
@@ -142,8 +153,34 @@
 </svg>
 The reason for the more vivid memories among African-Americans is less clear. During my oral history interviews, I realized that New Year’s Eve is a spiritual event for many in the African-American community; many church congregations gather on December 31st each year to celebrate Watch Night and greet the stroke of midnight with fervent prayer. A woman in one of my interviews, for example, recalled the exact Psalm her preacher was reciting as the year 2000 approached. Add in the possibility of Y2K bug-induced chaos, and perhaps that moment became even more emotionally charged.</br></br>A few other interesting trends emerged in the data. Republicans’ memories were 11 percent more vivid than Democrats’. People with children on December 31, 1999 were much less likely to remember that night than those who didn’t have kids at the time (only 46 percent of then-parents remember it well, versus 73 percent of the childless).</br></br>But of all the demographic trends, the most dramatic one emerged when I broke the data down by age. That result deserved its own section in the story.
  </p>
-<a href="bump.html">Next</a>
 </div>
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-1 page-number">
+    <h6>2<span class="pipe">|</span></h6>
+   </div>
+   <div class="col-xs-10 project-title">
+    <h6>Millennium Memory Project</h6>
+   </div>
+   <div class="col-xs-1 next-page">
+    <a href="bump.html">▶︎</a>
+   </div>
+  </div>
+ </div>
+ 
+ <div class="container" id="methods-lightbox" style="display:none;">
+  <div class="row">
+   <div class="col-xs-12">
+   <a href="javascript:void(0)" class="closebtn" id="methods-closer" onclick="closeMethods()">&times;</a>
+   <h2 class="headline">Methods and Limitations</h2>
+   <p class="article-text">The Millennium Memory Project is a work of journalism, not social science. The survey results are not intended to be generalizable or published in a traditional academic journal (hence, you’re reading this in a personal website).<br><br>That being said, I made every effort during the research to minimize common survey errors (e.g., coverage, non-response, and measurement errors) and make the results as valid as possible. I built the online survey with Qualtrics software and distributed it through Amazon’s Mechanical Turk crowdsourcing platform. I required that the Mechanical Turk workers (or “Turkers, “ as they’re called) have at least 1000 surveys under their belts and an approval rating of 97 percent or higher, and I included attention-check questions in the survey to ensure that they were making a good-faith effort. I paid each respondent $1 for her time. I received 200 responses. The total number was comparable to the size of respondent pools from previous studies on flashbulb memory.<br><br>The demographics of the respondents approximated that of the overall U.S. population fairly well, except for a lack of people over the age of 65 (the Mechanical Turk workforce skews younger than the general population). To account for this, I supplemented the online survey with a paper version at the Orange County Senior Center in Chapel Hill, North Carolina, bringing the total number of responses to 214.</p>
+<h2 class="headline">How the Survey Worked</h2>
+<p class="article-text">To determine whether someone had a flashbulb memory from New Year’s Eve 1999, the survey began with a series of questions about the autobiographical context of the memory, such as “Do you remember where you were?” and “Do you remember who you were with?” Each question had scored answer options, ranging from “not at all” to “very vividly,” and the numbers were combined for an overall Memory Score. The survey also asked the respondents to share their stories in an open-ended text field. The written narratives were compared with the Memory Scores to confirm the validity of the metric and pool the responses into categories of Flashbulb and Non-Flashbulb.<br><br>The survey also included a litany of questions in order to identify possible correlations between the New Year’s Eve 1999 memories and various demographics, such as gender, race, educational level, and marital status. Please note that while the total number of survey responses (n = 214) was adequate for determining the general percentages of flashbulb and non-flashbulb memories, some of the individual demographic patterns should be taken with a grain of salt because of small sample size. For example, while I can accurately report that 36 percent of Republicans in my survey vividly remembered where they were on New Year’s Eve 1999, I cannot say that is likely the case for <em>all</em> Republicans in the United States, because the number of Republican responses (n = 36) is too small to make that statistical leap.<br><br>Once again, I make no claims to generalizability.</p>
+<a href="javascript:void(0)" class="closebtn" id="methods-closer" onclick="closeMethods()">&times;</a>
+   </div>
+  </div>
+ </div>
+ 
 <script>
  $(document).ready(function(){
  //Don't use the responsive SVG canvases in iPad landscape and desktop viewports//
@@ -159,6 +196,30 @@ The reason for the more vivid memories among African-Americans is less clear. Du
      }
 });
    });
+</script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("page-content").style.opacity = "0.1";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+}
+
+function showMethods() {
+    document.getElementById("methods-lightbox").style.display="block";
+    document.getElementById("page-content").style.opacity = "0";
+    document.getElementById("navbutton").style.opacity = "0";
+}
+
+function closeMethods() {
+    document.getElementById("methods-lightbox").style.display="none";
+    document.getElementById("page-content").style.opacity = "1";
+    document.getElementById("navbutton").style.opacity = "1";
+}
+
 </script>
 
 <script src="//d3js.org/d3.v3.min.js"></script>

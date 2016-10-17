@@ -1,14 +1,108 @@
+.hamburger{
+    float:right;
+    margin-right:7%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    font-weight:300;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#page-content, #navbutton{
+     transition: 0.5s;
+}
+
+.page-number, .project-title, .next-page{
+    float:left;
+    font-family:Copperplate;
+}
+
+.pipe{
+    font-weight:100;
+    color:#ccc;
+    padding-left:5px;
+}
+
+.next-page a{
+    color:black;
+    padding-right:10px;
+}
+.next-page a:hover{
+    color:#ccc;
+    text-decoration:none;
+}
+
+#methods{
+    color:red;
+}
+
+#methods-lightbox{
+    transition:0.5s;
+    z-index:10;
+    position:absolute;
+    top:5%;
+    left:5%;
+    width:90%;
+}
+
+#methods-closer{
+    float:right;
+    font-size:2em;
+}
+
+#methods-closer a:hover{
+   color:#ccc;
+   text-decoration:none;
+}
 
 #big-letter {
     float:left;
     font-size:25em;
     font-family:Garamond;
-    line-height:60%;
+    line-height:55%;
+    shape-outside:circle(50%);
+    margin:20px;
 }
 
 @media screen and (max-width: 767px)  {
    #big-letter{
-        font-size:14em;
+        font-size:10em;
+        margin:10px;
     }
 }
 
@@ -18,14 +112,26 @@
 
 @media screen and (max-width: 767px)  {
    #lead{
-        font-size:1.7em;
+        font-size:1em;
     }
+}
+
+.headline{
+    font-family:Bookman;
+}
+
+.article{
+    padding-top:5%;
 }
 
 .article-text{
 	font-family:Helvetica;
 	font-weight:200;
-	font-size:1em;
+	font-size:1.1em;
+}
+
+#pull-quote{
+    line-height:1.1;
 }
 
 .svg-container {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<html>
+<html ng-app="myApp" ng-controller="BaseController as base">
     <head>
         <title>Interview Table</title>
 <meta charset="utf-8">
@@ -10,9 +10,19 @@
 <link rel="stylesheet" type="text/css" href="css/interviews.css"/>
     </head>
     
-<body ng-app="myApp" ng-controller="BaseController as base">
+<body>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="intro.html">Introduction</a>
+  <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+  <a href="bump.html">The Reminiscence Bump</a>
+  <a href="map.html">Where We Were</a>
+  <a href="chord.html">Who We Were With</a>
+  <a href="interviews.html">What We Remember</a>
+ </div>
+ <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 
-<container ng-controller="InterviewsController as intCtrl">
+<div class="container" id="page-content" ng-controller="InterviewsController as intCtrl">
  <div class="row">
   <div class="col-xs-12 col-md-4" id="interviews-header">
    <div id="interviews-intro-desktop">
@@ -147,16 +157,28 @@
   </div><!--close quote/table combo row-->
 
 <div class="row">
-    <div class="col-xs-12" id="interviews-article">
+    <div class="col-xs-12 article-text">
         <p><span class="test">T</span> his project was born from idle curiosity and bred through conversation. It began with a simple question -- “Do you remember where you were on New Year’s Eve 1999?”<br>When I asked this question, people usually had stories to tell. And they wanted to tell them.  A cashier at an office supply store remembered asking her fiancée for a foot rub that night (“I thought it would be the perfect way to ring in the new millennium,” she said. “He refused. But I married him anyway.”)  An EMT recalled starting his ambulance just before midnight because they were worried that the Y2K bug would keep the engine from turning. One man cried while sharing his memories. A woman at a bus station recited Scripture. Nearly everyone laughed.<br><br>As I got deeper into the interviews, I realized that these stories weren’t worth archiving just because they were interesting. They were important. Our modern zeitgeist – our collective mindset of everything everywhere, all the time and on-demand, carefully curated Facebook lives and carelessly cruel comment sections, disposable devices (good luck finding a repairman for your broken selfie stick), disposable knowledge, disposable candidates, disposable careers, tap-tap-tap and text your mom on her birthday – all of this started at the turn of the millennium.<br><br>Well, not exactly, of course; things aren’t that cut-and-dry. But 1999 was the “precursor” to the seismic cultural shifts that were soon to follow, as one person told me in an interview. When the world went broadband and wireless: that’s when the train left the station. Many were afraid of the Y2K bug, not because they didn’t understand the digital disease, but because they didn’t understand its potential victims. <em>Is my toaster run by a computer? I don’t know. Maybe. Probably. Better pull some cash out of the bank.</em><br><br>Entire ways of life – particularly the ways we communicate with each other -- have changed at a fundamental level since 1999. Of course, you could argue that this is nothing new; the people in late-15th century Europe probably lamented the lost art of fireside storytelling after Gutenberg invented the printing press. The overestimation of change is as constant as change itself.  But it seems like it’s taken on a new tenor and pace in the modern age. During one of my interviews in this project, a middle-aged woman from Massachusetts told me,<br>“Kids are hooked in so much to their media that they’re not communicating.”<br><br>Her husband shook his head and argued, “But they said that with televisions, too, when televisions came out.”<br><br>Then the woman replied, “Yeah, but with television, you’d walk out the door and it’s not there anymore.”<br><br>This project is a time capsule, and by the turn of the next millennium, the capsule’s container (a website) will probably be as much an artifact as the information it contains.  But with a little luck, it will be there, in some form, for edification and enjoyment in the year 3000.<br><br>Of course, the robots may have better things to do.</p>
     </div>
 </div>
-
 </container>
 
- <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
- <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-1 page-number">
+    <h6>6<span class="pipe">|</span></h6>
+   </div>
+   <div class="col-xs-10 project-title">
+    <h6>Millennium Memory Project</h6>
+   </div>
+   <div class="col-xs-1 next-page">
+   </div>
+  </div>
+ </div>
+
+ <!--<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>-->
+ <!--<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+ <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
  <script type="text/javascript" src="js/angular.min.js"></script>
  <script type="text/javascript" src="js/angular-animate.min.js"></script>
  <script type="text/javascript" src="js/app.js"></script>
@@ -169,6 +191,15 @@
     document.getElementById("interviews-illustration").className = "fade-out";
  }
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("page-content").style.opacity = "0.1";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+}
 </script>
 </body>
 </html>
