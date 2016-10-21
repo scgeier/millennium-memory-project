@@ -1,0 +1,50 @@
+
+
+#screen{
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+video{
+    width:80%;
+    height:auto;
+    margin:5% 0% 5% 0%;
+    border:1px solid gray;
+    border-radius:3%;
+}
+
+#slidecast-wrapper{
+    text-align:center;
+    background:#eeeeee;
+    width:70%;
+    height:auto;
+    margin:1% 0% 10% 10%;
+    border-radius:2%;
+    border: 1px solid gray;
+}
+
+#VHS{
+    width:50%;
+    height:9%;
+    border:1px solid gray;
+    border-radius:3%;
+    text-align:center;
+    margin:auto;
+    margin-bottom:2%;
+
+}
+
+#video-controls{
+    margin-bottom:2%;
+}
+
+button{
+    width:30px;
+    background:#eeeeee;
+    border:1px solid gray;
+    border-radius:40%;
+}
+
+button:focus{
+    color:none;
+}
+    

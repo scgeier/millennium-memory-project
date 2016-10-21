@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Slidecast</title>
+
+<script src="https://use.fontawesome.com/782950d504.js"></script>
+<!--Boostrap CSS CDN-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--My main CSS-->
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="css/slidecast.css"/> 
+</head>
+
+<body>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="intro.html">Introduction</a>
+  <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+  <a href="bump.html">The Reminiscence Bump</a>
+  <a href="map.html">Where We Were</a>
+  <a href="chord.html">Who We Were With</a>
+  <a href="slidecast.html">What We Remember: A Slidecast</a>
+  <a href="interviews.html">Audio Time Capsule</a>
+</div>
+<span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+
+  <div class="row" id="slidecast-wrapper">
+    <div class="col-xs-12">
+    <div id="screen">
+     <video id="slidecast">
+      <source src="audio/slidecast2.webm" type="video/webm">
+      <source src="audio/slidecast2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+     </video>
+     </div>
+    <div id="VHS">
+        <h4>VHS</h4>
+    </div>
+    
+    <div id="video-controls">
+     <button onclick="playVid()" type="button"><i class="fa fa-play" aria-hidden="true"></i></button>
+     <button onclick="pauseVid()" type="button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+     <button onclick="fullScreen()" type="button"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+    </div>
+
+  </div>
+ </div>
+ </div>
+ 
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-1 page-number">
+    <h6>6<span class="pipe">|</span></h6>
+   </div>
+   <div class="col-xs-10 project-title">
+    <h6>Millennium Memory Project</h6>
+   </div>
+   <div class="col-xs-1 next-page">
+    <a href="interviews.html">▶︎</a>
+   </div>
+  </div>
+ </div>
+ 
+ 
+<!--JQuery CDN-->
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<!--Bootstrap JS CDN-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("page-content").style.opacity = "0.1";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+}
+
+var vid = document.getElementById("slidecast");
+
+function playVid() {
+    vid.play();
+}
+
+function pauseVid() {
+    vid.pause();
+}
+
+function fullScreen() {
+    vid.webkitEnterFullScreen();
+}
+</script>
+</body>
+</html>
