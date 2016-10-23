@@ -1,50 +1,61 @@
 
 
 #screen{
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+      position:absolute;
+      top:5%;
+      left:15%;
 }
 
-video{
+video{  
     width:80%;
-    height:auto;
-    margin:5% 0% 5% 0%;
+    height:55%;
     border:1px solid gray;
     border-radius:3%;
 }
 
 #slidecast-wrapper{
-    text-align:center;
-    background:#eeeeee;
-    width:70%;
+    width:52%;
     height:auto;
-    margin:1% 0% 10% 10%;
-    border-radius:2%;
-    border: 1px solid gray;
+    margin:1% 0% 0% 15%;
 }
 
-#VHS{
-    width:50%;
-    height:9%;
-    border:1px solid gray;
-    border-radius:3%;
-    text-align:center;
-    margin:auto;
-    margin-bottom:2%;
-
+#play-button:hover, #pause-button:hover, #full-screen-button:hover{
+  fill:#ccc;
 }
 
-#video-controls{
-    margin-bottom:2%;
-}
 
-button{
-    width:30px;
-    background:#eeeeee;
-    border:1px solid gray;
-    border-radius:40%;
-}
+ .a, .b, .c, .d, .e, .g {
+        fill: none;
+      }
 
-button:focus{
-    color:none;
-}
-    
+      .a {
+        stroke: #000;
+      }
+
+      .a, .b, .c, .d, .e {
+        stroke-miterlimit: 10;
+      }
+
+      .b, .c {
+        stroke: #595757;
+      }
+
+      .b, .c, .d, .e {
+        stroke-width: 0.75px;
+      }
+
+      .c, .e {
+        stroke-dasharray: 3.95 3.95;
+      }
+
+      .d, .e {
+        stroke: #494848;
+      }
+
+      .f {
+        fill: #fff;
+      }
+
+      .h {
+        fill: #e6e5e5;
+      }

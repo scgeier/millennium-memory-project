@@ -21,7 +21,8 @@
 #radio-options{
    position:absolute;
    top:70%;
-   right:35%;
+   right:17%;
+   width:40%;
 }
 
 /*IPAD - PORTRAIT*/
@@ -33,12 +34,13 @@
 }
 
 /*IPAD - LANDSCAPE*/
-@media screen and (min-width:1024px) and (max-width: 1278px)  {
+@media screen and (min-width:1024px) and (max-width: 1179px)  {
    #radio-options{
      top:60%;
      left:12%
     }
 }*/
+
 
 .mainBars rect{
   shape-rendering: auto;
