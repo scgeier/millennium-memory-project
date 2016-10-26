@@ -1,0 +1,65 @@
+.splash-title-area{
+    position:absolute;
+    z-index:10;
+}
+
+.splash-title{
+    font-family: 'Gravitas One', cursive;
+    font-size:5em;
+}
+
+#subtitle{
+    font-family:Helvetica Neue;
+    font-weight:100;
+    font-size:2em;
+}
+
+#plug-in{
+    font-family: serif;
+    font-weight:200;
+    font-size:1.5em;
+    margin:15% 0% 0% 40%;
+}
+
+#pointer{
+    font-size:2em;
+}
+
+#cover-illustration{
+    position:absolute;
+    top:5%;
+    right:5%;
+    width:50%;
+    z-index:3;
+}
+
+.jack{
+    width:85%;
+    margin-left:5%;
+    z-index:1;
+}
+
+.cord{
+    position:absolute;
+    top:55%;
+    right:50%;
+    width:80%;
+    z-index:2;
+}
+
+ .a {
+        fill: #fff;
+      }
+
+      .b {
+        fill: #d1cfcf;
+      }
+
+      .c {
+        fill: #f5f3f3;
+      }
+
+      .d {
+        fill: #f8f7f7;
+      }
+

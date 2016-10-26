@@ -7,22 +7,54 @@
 
 <!--Boostrap CSS CDN-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Gravitas+One" rel="stylesheet">
 <!--My CSS-->
-<link rel="stylesheet" type="text/css" href="css/styles.css"/> 
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="css/splash.css"/> 
 </head>
 
 <body>
- <div class="container">
+<div class="container">
+  <div class="splash-title-area">
+   <p class="splash-title">MILLENNIUM<br>MEMORY<br>PROJECT</p>
+   <p id="subtitle">a story in sound and numbers</p><br>
+   <p id="plug-in"><em>plug in to begin</em> <span id="pointer">☞</span></p>
+</div>
   
-  <h1>This will be the Splash Page for the <br>Millennium Memory Project</h1>
-  <a href="intro.html"><h4>Enter</h4></a>
-
+ <div id="cover-illustration">
+     <img class="cord" id="draggable" src="img/neat-cord.svg">
+     <img class="jack" id="droppable" src="img/phone-jack-smaller-hole.svg">
  </div>
+</div>
+ 
+  <audio id="myAudio">
+    <source src="audio/click.mp3" type="audio/mp3">
+ </audio>
  
  
-<!--JQuery CDN-->
+<!--JQuery CDNs-->
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <!--Touch Punch JS (allows JQuery UI drag and drop to work on mobile)-->
+<script src="js/jquery.ui.touch-punch.min.js"></script>
 <!--Bootstrap JS CDN-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!--JQuery UI drag and drop-->
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+       drop: function( event, ui ) {
+        $( this )
+          var sound = document.getElementById("myAudio");
+              sound.play();
+           setTimeout(function() {
+            window.location.assign("intro.html");
+             }, 500);
+      }
+    });
+     });
+  </script>
 </body>
 </html>
