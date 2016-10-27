@@ -1,3 +1,6 @@
+body{
+    margin:2%;
+}
 .hamburger{
     float:right;
     margin-right:7%;
@@ -58,19 +61,22 @@
     padding-left:5px;
 }
 
-.next-page a{
-    color:black;
-    padding-right:10px;
+.next-page{
+    padding-right:5px;
 }
-.next-page a:hover{
-    color:#ccc;
-    text-decoration:none;
+.next-arrow {
+    width:90%; 
+}
+.next-arrow:hover{
+    width:91%;
 }
 
 #compliant-message{
     text-align:center;
     margin-top:20%;
     background:white;
+    font-family: 'VT323', monospace;
+    font-size:1.2em;
 }
 
 
@@ -143,6 +149,24 @@
 
 #pull-quote{
     line-height:1.1;
+}
+
+#computer-guy{
+    width:40%;
+    float:right;
+}
+
+@media screen and (min-width:320px) and (max-width: 767px)  {
+   #computer-guy{
+        width:60%;
+    }
+}
+/*Kindle Fire*/
+@media screen and (min-width:1600px) {
+    body{
+        font-size:3em;
+        margin:10% 0% 0% 0%;
+    }
 }
 
 .svg-container {

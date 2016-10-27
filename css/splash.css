@@ -4,8 +4,12 @@
 }
 
 .splash-title{
-    font-family: 'Gravitas One', cursive;
-    font-size:5em;
+    font-family: 'Playfair Display SC', serif;
+    font-size:6.5em;
+}
+
+#mmp-title{
+    width:100%;
 }
 
 #subtitle{
@@ -22,8 +26,10 @@
 }
 
 #pointer{
-    font-size:2em;
-}
+    font-size:1.2em;
+    position:absolute;
+    padding-left:3%;
+    }
 
 #cover-illustration{
     position:absolute;
@@ -62,4 +68,95 @@
       .d {
         fill: #f8f7f7;
       }
+
+/*iPHONE 5, PORTRAIT*/
+@media screen and (min-width:320px) and (max-width:767px){
+      .splash-title{
+         font-size:3em;
+      }
+      #subtitle{
+        font-size:1em;
+      }
+      
+      #plug-in{
+        font-size:1em;
+        margin:5% 0% 10% 0%;
+      }
+      
+      #pointer{
+        font-size:1em;
+        }
+      #cover-illustration{
+        top:20%;
+        }
+}
+
+/*iPHONE 6, PORTRAIT*/
+@media screen and (min-width:375px) and (max-width:767px){
+      .splash-title{
+         font-size:3.5em;
+      }
+      #subtitle{
+        font-size:1.2em;
+      }
+      #pointer{
+        font-size:1.2em;
+        }
+      #cover-illustration{
+        top:22%;
+        }
+}
+
+/*iPHONE 6+, PORTRAIT*/
+@media screen and (min-width:414px) and (max-width:767px){
+      .splash-title{
+         font-size:4em;
+      }
+      #subtitle{
+        font-size:1.3em;
+      }
+}
+
+/*iPAD, PORTRAIT*/
+@media screen and (min-width:768px) and (max-width:1023px){
+      #subtitle{
+        font-size:1.8em;
+      }
+      
+      #plug-in{
+        font-size:1.2em;
+        margin:5% 10% 10% 20%;
+      }
+      
+      #pointer{
+        font-size:1em;
+        }
+      #cover-illustration{
+        top:20%;
+        }
+
+}
+
+/*Kindle Fire, PORTRAIT*/
+@media screen and (min-width:1600px) and (max-width:2560px){
+      .splash-title{
+         font-size:12em;
+      }
+      #subtitle{
+        font-size:4em;
+      }
+      
+      #plug-in{
+        font-size:3em;
+        margin:20% 20% 0% 0%;
+      }
+      
+      #pointer{
+        font-size:1em;
+        }
+      #cover-illustration{
+        top:20%;
+        }
+
+}
 
