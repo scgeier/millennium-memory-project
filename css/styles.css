@@ -67,6 +67,17 @@
     text-decoration:none;
 }
 
+#compliant-message{
+    text-align:center;
+    margin-top:20%;
+    background:white;
+}
+
+
+#page-fade-in {
+    display:none;
+}
+
 #methods{
     color:red;
 }
@@ -92,11 +103,11 @@
 
 #big-letter {
     float:left;
-    font-size:25em;
+    font-size:22em;
     font-family:Garamond;
-    line-height:55%;
+    line-height:50%;
     shape-outside:circle(50%);
-    margin:20px;
+    margin:20px 20px 20px 0px;
 }
 
 @media screen and (max-width: 767px)  {
@@ -107,7 +118,7 @@
 }
 
 #lead{
-    font-size:2em;
+    font-size:1.7em;
 }
 
 @media screen and (max-width: 767px)  {
