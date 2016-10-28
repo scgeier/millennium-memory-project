@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html ng-app="myApp" ng-controller="BaseController as base">
     <head>
-        <title>Interview Table</title>
+        <title>Audio Archive</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -19,7 +19,7 @@
   <a href="map.html">Where We Were</a>
   <a href="chord.html">Who We Were With</a>
   <a href="slidecast.html">What We Remember: A Slidecast</a>
-  <a href="interviews.html">Audio Time Capsule</a>
+  <a href="interviews.html">The Time Capsule</a>
  </div>
  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 
@@ -28,7 +28,7 @@
   <div class="col-xs-12 col-md-4" id="interviews-header">
    <div id="interviews-intro-desktop">
     <img src="img/quote-marks.png" class="quote-icon"/></a>
-    <h2 id="default-quote">I remember very vividly, being part of history.</h2>
+    <h3 id="default-quote">This project is kind of a time capsule. You never know who's going to listen to it down the road.</h3>
     <h2 class="animate" ng-repeat="interview in intCtrl.interviews | filter:intCtrl.activeInt" ng-if="intCtrl.isVisible" id="interviews-introduction">{{interview.quote}}</h2>
    </div>
    <div id="interviews-illustration">
@@ -122,7 +122,7 @@
    </div>
  </div>
 
-<div class="col-xs-12 col-md-8 table-content">
+<div class="col-xs-12 col-md-8" id="table-content">
 
 <!--search bar---> 
    <form class="interviews-search" role="search">
@@ -156,13 +156,16 @@
   </table>
   </div><!--close table area col-->
   </div><!--close quote/table combo row-->
+</div><!--close container-->
 
 <div class="row">
-    <div class="col-xs-12 article-text">
-        <p><span class="test">T</span> his project was born from idle curiosity and bred through conversation. It began with a simple question -- “Do you remember where you were on New Year’s Eve 1999?”<br>When I asked this question, people usually had stories to tell. And they wanted to tell them.  A cashier at an office supply store remembered asking her fiancée for a foot rub that night (“I thought it would be the perfect way to ring in the new millennium,” she said. “He refused. But I married him anyway.”)  An EMT recalled starting his ambulance just before midnight because they were worried that the Y2K bug would keep the engine from turning. One man cried while sharing his memories. A woman at a bus station recited Scripture. Nearly everyone laughed.<br><br>As I got deeper into the interviews, I realized that these stories weren’t worth archiving just because they were interesting. They were important. Our modern zeitgeist – our collective mindset of everything everywhere, all the time and on-demand, carefully curated Facebook lives and carelessly cruel comment sections, disposable devices (good luck finding a repairman for your broken selfie stick), disposable knowledge, disposable candidates, disposable careers, tap-tap-tap and text your mom on her birthday – all of this started at the turn of the millennium.<br><br>Well, not exactly, of course; things aren’t that cut-and-dry. But 1999 was the “precursor” to the seismic cultural shifts that were soon to follow, as one person told me in an interview. When the world went broadband and wireless: that’s when the train left the station. Many were afraid of the Y2K bug, not because they didn’t understand the digital disease, but because they didn’t understand its potential victims. <em>Is my toaster run by a computer? I don’t know. Maybe. Probably. Better pull some cash out of the bank.</em><br><br>Entire ways of life – particularly the ways we communicate with each other -- have changed at a fundamental level since 1999. Of course, you could argue that this is nothing new; the people in late-15th century Europe probably lamented the lost art of fireside storytelling after Gutenberg invented the printing press. The overestimation of change is as constant as change itself.  But it seems like it’s taken on a new tenor and pace in the modern age. During one of my interviews in this project, a middle-aged woman from Massachusetts told me,<br>“Kids are hooked in so much to their media that they’re not communicating.”<br><br>Her husband shook his head and argued, “But they said that with televisions, too, when televisions came out.”<br><br>Then the woman replied, “Yeah, but with television, you’d walk out the door and it’s not there anymore.”<br><br>This project is a time capsule, and by the turn of the next millennium, the capsule’s container (a website) will probably be as much an artifact as the information it contains.  But with a little luck, it will be there, in some form, for edification and enjoyment in the year 3000.<br><br>Of course, the robots may have better things to do.</p>
-    </div>
+<p class="article-text" id="interviews-article"><span class="test">T</span>he Millennium Memory Project is an attempt to join together two disciplines that seem similar but are in fact quite distict -- journalism and oral history. The journalist's job, in a story like this, is to comb through hours of audio and find the 'backbone' of the story, the narrative thread, as they say, and bring it to life with sound bites. This would make an oral historian cringe.<br><br></p>
 </div>
-</container>
+<div class="row">
+    <button class="btn btn-default btn-sm" id="mobile-table-button" onclick="showTable();">Open the Capsule</button>
+</div>
+
+
 
  <div class="container">
   <div class="row">
@@ -200,6 +203,13 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
+}
+
+function showTable(){
+    document.getElementById("interviews-header").className = "fade-out";
+    document.getElementById("interviews-article").className = "fade-out";
+     document.getElementById("interviews-illustration").className = "fade-out";
+    document.getElementById("table-content").style.display = "block";
 }
 </script>
 </body>

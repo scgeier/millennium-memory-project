@@ -13,7 +13,7 @@
 }
 
 #default-quote{
-    font-size:3em;
+    font-size:2em;
     font-family:Bookman;
     font-weight:700;
 }
@@ -47,17 +47,17 @@
     opacity:0;
 }
 
-.table-content{
-    height:500px;
+#table-content{
+    height:400px;
     overflow-y:scroll;
     padding-right:5%;
 }
 
-@media and screen (max-width:767px){
-  .table-content{
-   display:none!important;
-  }
+#mobile-table-button{
+  display:none;
 }
+
+
 
 /*VANILLA JS CODE FOR FADE-OUT ON DEFAULT INTRO PULL QUOTE*/
 @keyframes fadeOut {
@@ -70,6 +70,7 @@
   display:none;
   animation: fadeOut .5s linear;
 }
+
 
 .interviews-search{
   float:right;
@@ -85,6 +86,11 @@
 
 #interviews-article, #interviews-header {
     padding-left:5%;
+}
+
+#interviews-article{
+  line-height:1.3em;
+  margin-top:2%;
 }
 
 #interviews-header, .table-content{
@@ -107,7 +113,7 @@ audio {
 
 #kiss{
   padding-top:5%;
-  width:85%;
+  width:100%;
 }
 
       .a {
@@ -129,3 +135,20 @@ audio {
       .e {
         fill: #f3f3f2;
       }
+    
+@media screen and (min-width:320px) and (max-width:767px){
+ #mobile-table-button{
+    display:inline-block;
+      }
+      
+ #table-content{
+    display:none;
+    position:absolute;
+    top:20%;
+    left:5%;
+ }
+  #interviews-illustration{
+     width:80%;
+     float:right;
+ }
+}  
