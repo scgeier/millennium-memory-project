@@ -23,15 +23,15 @@
  </div>
  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 
-<div class="container" id="page-content" ng-controller="InterviewsController as intCtrl">
+<div class="container" id="desktop-content" ng-controller="InterviewsController as intCtrl">
  <div class="row">
-  <div class="col-xs-12 col-md-4" id="interviews-header">
-   <div id="interviews-intro-desktop">
+  <div class="col-xs-12 col-md-4" id="quote-illustration-area">
+   <div id="quote-area">
     <img src="img/quote-marks.png" class="quote-icon"/></a>
     <h3 id="default-quote">This project is kind of a time capsule. You never know who's going to listen to it down the road.</h3>
     <h2 class="animate" ng-repeat="interview in intCtrl.interviews | filter:intCtrl.activeInt" ng-if="intCtrl.isVisible" id="interviews-introduction">{{interview.quote}}</h2>
    </div>
-   <div id="interviews-illustration">
+   <div id="illustration-area">
     <svg id="kiss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.91 181.54">
 <title>kiss-funny</title>
   <path d="M670.25,425.12a2,2,0,0,1,1,.49,2,2,0,0,1,.34.38,2.36,2.36,0,0,1,.22.55,1.64,1.64,0,0,0,.26.55,2.34,2.34,0,0,0,.44.44,2.83,2.83,0,0,1,.47.44c0.13,0.16.25,0.33,0.36,0.49a2.29,2.29,0,0,1,.26.51,3.09,3.09,0,0,1,.14.5,2.71,2.71,0,0,1,0,1.11l-0.09,0a4.65,4.65,0,0,1-.73-0.79,4.05,4.05,0,0,1-.5-0.87,5.84,5.84,0,0,1-.37-1.13,1.72,1.72,0,0,0-.23-0.56,1.28,1.28,0,0,0-.43-0.4,3.11,3.11,0,0,1-.47-0.31,2.55,2.55,0,0,1-.3-0.37,3.39,3.39,0,0,1-.34-0.67,1.44,1.44,0,0,1-.08-0.31Z" transform="translate(-644.64 -334.64)"/>
@@ -123,10 +123,10 @@
  </div>
 
 <div class="col-xs-12 col-md-8" id="table-content">
-
+ <p id="mobile-table-intro">A complete table with interview transcripts is available in the desktop version of this website.</p>
 <!--search bar---> 
    <form class="interviews-search" role="search">
-     <input type="text" class="form-control" placeholder="Search (e.g, Y2K, apocalypse, dial-up)" ng-model="terms">
+     <input type="text" class="form-control" placeholder="Search the archive (e.g, Y2K, apocalypse, dial-up)" ng-model="terms">
   </form>
  
    <table class="table table-hover">
@@ -136,10 +136,10 @@
         <th><button class="btn btn-default btn-sm header" ng-click="intCtrl.sort('first')">First</button></th>
         <th><button class="btn btn-default btn-sm header" ng-click="intCtrl.sort('age')">Age</button></th>
         <!--<th><button class="btn btn-default btn-sm header" ng-click="intCtrl.sort('residence')">Residence</button></th>-->
-        <th><button class="btn btn-default btn-sm header" ng-click="intCtrl.sort('interviewLocation')">Location</button></th>
+        <th><button class="btn btn-default btn-sm header location" ng-click="intCtrl.sort('interviewLocation')">Location</button></th>
         <!--<th><button class="btn btn-default btn-sm header" id="life-info" ng-click="intCtrl.sort('duration')">Duration</button></th>-->
-        <th><button class="btn btn-default btn-sm header" ng-click="intCtrl.sort('transcript')">Transcript</button></th>
-        <th><button class="btn btn-default btn-sm header" ng-click="intCtrl.sort('audio')">Audio</button></th>
+        <th><button class="btn btn-default btn-sm header transcript" ng-click="intCtrl.sort('transcript')">Transcript</button></th>
+        <th><button class="btn btn-default btn-sm header" id="audio-header" ng-click="intCtrl.sort('audio')">Audio</button></th>
       </tr>
     </thead>
     <tbody class="quote" ng-repeat="interview in intCtrl.interviews | filter:terms | orderBy:intCtrl.sortProperty:intCtrl.reverseSort">
@@ -148,22 +148,25 @@
         <td>{{interview.first}}</td>
         <td>{{interview.age}}</td>
         <!--<td>{{interview.residence}}</td>-->
-        <td>{{interview.interviewLocation}}</td>
+        <td class="location">{{interview.interviewLocation}}</td>
         <!--<td>{{interview.duration}}</td>-->
-        <td><a href="/{{interview.transcript}}" target="_blank"><img src="img/adobe-icon.png" class="pdf-icon"/></a></td>
+        <td class="transcript"><a href="/{{interview.transcript}}" target="_blank"><img src="img/adobe-icon.png" class="pdf-icon"/></a></td>
         <td><audio id="test" src="{{interview.audio}}"controls preload="metadata"></audio></td>
       </tr>
   </table>
   </div><!--close table area col-->
   </div><!--close quote/table combo row-->
-</div><!--close container-->
 
 <div class="row">
-<p class="article-text" id="interviews-article"><span class="test">I</span>’ve always been fascinated with time capsules. I wish there were thousands of them, from different eras, stashed all over the place, and we were digging them up accidentally in our backyards when planting azaleas. <br><br>Time capsules – the good ones, at least -- have the intrigue of a candid street photograph. They are not exhibits in a history museum, or aisles in an antique store; they are not curated. They are full of ephemeral and imperfect details, and these details make the past a real and living thing. What draws your eye first when you open the rusty box in the cornerstone at old city hall? The letter from the mayor or the third-grader’s drawing of her cat?<br><br>At its heart, this project was meant to be a work of journalism; a singular, non-fiction story about our memories from the turn of the millennium. But I didn’t want it to end up as a letter from the mayor. There were too many good cat drawings along the way.<br><br>So I decided to make an audio time capsule and put everything I gathered into one place, unedited, unadorned, with transcripts.<br><br>Now, I’m fully aware that the container for this time capsule  -- a website -- is just like the rusty box. One day, it will probably be as much an artifact as the information it contains, and there may be no way to open it. But with a little luck, it will be there, in some form, for edification and enjoyment at the turn of the next millennium, in the year 3000.<br><br>Of course, the robots may have better things to do.</p>
+<p class="article-text" id="interviews-article"><span class="test">I</span>’ve always been fascinated with time capsules. I wish there were thousands of them, from different eras, stashed all over the place, and we were digging them up accidentally in our backyards when planting azaleas.<img id="mobile-table-button" src="img/time-capsule.svg" onclick="showTable();"><br><br>Time capsules – the good ones, at least -- have the intrigue of a candid street photograph. They are not exhibits in a history museum, or aisles in an antique store; they are not curated. They are full of ephemeral and imperfect details, and these details make the past a real and living thing. What draws your eye first when you open the rusty box in the cornerstone at old city hall? The letter from the mayor or the third-grader’s drawing of her cat?<br><br>At its heart, this project was meant to be a work of journalism; a singular, non-fiction story about our memories from the turn of the millennium. But I didn’t want it to end up as a letter from the mayor. There were too many good cat drawings along the way.<br><br>So I decided to make an audio time capsule and put everything I gathered into one place, unedited, unadorned, with transcripts. <span id="mobile-open-instructions">Tap the lid to open.</span><br><br>Now, I’m fully aware that the container for this time capsule  -- a website -- is just like the rusty box. One day, it will probably be as much an artifact as the information it contains, and there may be no way to open it. But with a little luck, it will be there, in some form, for edification and enjoyment at the turn of the next millennium, in the year 3000.<br><br>Of course, the robots may have better things to do.</p>
 </div>
-<div class="row">
-    <button class="btn btn-default btn-sm" id="mobile-table-button" onclick="showTable();">Open the Capsule</button>
-</div>
+</div><!--close desktop container-->
+
+
+
+
+
+
 
 
 
@@ -192,7 +195,7 @@
 //Hide the intro pull quote when the user mouses over the others//
  function hideDefault() {
     document.getElementById("default-quote").className = "fade-out";
-    document.getElementById("interviews-illustration").className = "fade-out";
+    document.getElementById("illustration-area").className = "fade-out";
  }
 
 function openNav() {
@@ -206,9 +209,8 @@ function closeNav() {
 }
 
 function showTable(){
-    document.getElementById("interviews-header").className = "fade-out";
+    document.getElementById("quote-illustration-area").className = "fade-out";
     document.getElementById("interviews-article").className = "fade-out";
-     document.getElementById("interviews-illustration").className = "fade-out";
     document.getElementById("table-content").style.display = "block";
 }
 </script>
