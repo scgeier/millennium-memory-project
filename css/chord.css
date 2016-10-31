@@ -1,34 +1,63 @@
 
-#chart-area{
+#chart-canvas{
     float:right;
     width:60%;
     height:500px;
 }
 
+#radio-options{
+   position:absolute;
+   top:72%;
+   right:19%;
+   width:40%;
+}
+
+/*The svg-responsive canvas method isn't working with this chart. Below are the media queries to fix the size and position, for each viewport*/
+/*for all mobile screens*/
 @media screen and (max-width: 767px)  {
-   #chart-area{
-        display:none;
+   #chart-canvas{
+        clear:both;
+        width:100%;
+        height:320px;
     }
 }
 
+
+/*iPhone 6*/
+@media screen and (max-width: 767px) {
+    #eduChart{
+        position:absolute;
+        top:5%;
+        right:4%;
+        zoom:0.62;
+    }
+    #radio-options{
+        top:50%;
+        left:10%;
+        width:100%;
+    }
+}
+
+
+
+/*iPad, portrait*/
 @media screen and (min-width:768px) and (max-width: 1080px)  {
-   #chart-area{
+   #chart-canvas{
         width:100%;
         float:left;
     }
 }
 
-#radio-options{
-   position:absolute;
-   top:70%;
-   right:17%;
-   width:40%;
+
+
+#religion-button, #politics-button{
+    margin-left:20px;
 }
 
 /*IPAD - PORTRAIT*/
 @media screen and (min-width:768px) and (max-width: 1023px)  {
    #radio-options{
-     top:45%;
+     top:50%;
      left:15%
     }
 }
@@ -36,7 +65,7 @@
 /*IPAD - LANDSCAPE*/
 @media screen and (min-width:1024px) and (max-width: 1179px)  {
    #radio-options{
-     top:60%;
+     top:65%;
      left:12%
     }
 }*/
@@ -68,7 +97,7 @@
     font-family:Helvetica;
 }
 
-#religionChart {
+#religionChart, #politicsChart {
   display:none;
   border:none;
   width:100%;
@@ -76,15 +105,9 @@
   overflow:hidden;
 }
 
-
-#politicsChart {
-  display:none;
-  border:none;
-  width:100%;
-  height:auto;
-  overflow:hidden;
+#who-article{
+    margin:3% 0% 0% 0%;
 }
-
 .article-text{
 	font-family:Helvetica;
 	font-weight:200;

@@ -2,6 +2,8 @@
 <html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width" />
+<head>
+   <title>Religion Chord Diagram</title>
 <style>
   
 body{
@@ -32,10 +34,17 @@ body{
     font-family:Helvetica;
 }
 
-
+@media screen and (max-width: 767px)  {
+    #religionChart{
+	    position:absolute;
+        top:5%;
+        right:-1%;
+        zoom:0.58;
+    }
+}
 </style>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+</head>
 <body>
   
 
@@ -44,7 +53,7 @@ body{
 
 
 
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="http://vizjs.org/viz.v1.1.1.min.js"></script>
 <script src="js/religion.js"></script>

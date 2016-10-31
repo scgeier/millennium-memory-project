@@ -111,6 +111,6 @@ function mouseout(d){
 
  
          
-d3.select(self.frameElement).style("height", "800px");
+d3.select(self.frameElement).style("height", "500px");
 
 });//close document ready function
