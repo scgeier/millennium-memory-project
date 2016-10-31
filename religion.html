@@ -34,12 +34,33 @@ body{
     font-family:Helvetica;
 }
 
-@media screen and (max-width: 767px)  {
+/*iPhone 4 and 5*/
+@media screen and (min-width:275px) and (max-width: 329px)  {
+    #religionChart{
+	    position:absolute;
+        top:5%;
+        right:-1.5%;
+        zoom:0.5;
+	}
+}
+
+/*iPhone 6 and 7*/
+@media screen and (min-width:330px) and (max-width: 366px)  {
     #religionChart{
 	    position:absolute;
         top:5%;
         right:-1%;
         zoom:0.58;
+    }
+}
+
+/*iPhone 6 plus*/
+@media screen and (min-width:367px) and (max-width: 415px)  {
+    #religionChart{
+	    position:absolute;
+        top:5%;
+        right:2%;
+        zoom:0.6;
     }
 }
 </style>
