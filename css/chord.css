@@ -1,15 +1,11 @@
 
 #chart-canvas{
-    float:right;
-    width:60%;
-    height:500px;
+    width:100%;
+    height:400px;
 }
 
 #radio-options{
-   position:absolute;
-   bottom:35%;
-   right:17%;
-   width:40%;
+  margin:5% 0 2% 12%;
 }
 
 /*The svg-responsive canvas method isn't working with this chart. Below are the media queries to fix the size and position, for each viewport*/
@@ -17,89 +13,44 @@
 /*for all mobile screens*/
 @media screen and (max-width: 767px)  {
    #chart-canvas{
-        clear:both;
-        width:100%;
         height:320px;
     }
     #eduChart{
         position:absolute;
-        top:5%;
     }
     #radio-options{
         width:100%;
+        margin:0 0 5% 0;
     }
 }
 
-/*iPhone 4 and 5*/
+
 @media screen and (min-width:320px) and (max-width: 374px) {
     #eduChart{
         right:-2%;
         zoom:0.55;
     }
-    #radio-options{
-        top:52%;
-        left:7%;
-    }
+
 }
 
-/*iPhone 6 and 7*/
 @media screen and (min-width:375px) and (max-width: 413px) {
     #eduChart{
         right:2%;
         zoom:0.62;
     }
-    #radio-options{
-        top:50%;
-        left:10%;
-    }
 }
 
-/*iPhone 6 plus*/
+
 @media screen and (min-width:414px) and (max-width: 767px) {
     #eduChart{
         right:1%;
         zoom:0.7;
     }
-    #radio-options{
-        top:45%;
-        left:5%;
-    }
 }
-
-
-
-/*iPad, portrait*/
-@media screen and (min-width:768px) and (max-width: 1023px)  {
-   #chart-canvas{
-        width:100%;
-        float:right;
-    }
-    #radio-options{
-        
-    }
-}
-
-
 
 #religion-button, #politics-button{
     margin-left:20px;
 }
-
-/*IPAD - PORTRAIT*/
-@media screen and (min-width:768px) and (max-width: 1023px)  {
-   #radio-options{
-     top:50%;
-     left:15%
-    }
-}
-
-/*IPAD - LANDSCAPE*/
-@media screen and (min-width:1024px) and (max-width: 1279px)  {
-   #radio-options{
-     top:65%;
-     left:43%
-    }
-}*/
 
 
 .mainBars rect{
@@ -136,13 +87,22 @@
   overflow:hidden;
 }
 
-#who-article{
-    margin:3% 0% 0% 0%;
+#who-article-section-one{
+    margin-right:0;
+    padding-right:0;
 }
-.article-text{
-	font-family:Helvetica;
-	font-weight:200;
-	font-size:1em;
+
+#mobile-instructions{
+    display:none;
+}
+
+@media screen and (max-width: 1024px)  {
+   #desktop-instructions{
+        display:none;
+    }
+    #mobile-instructions{
+        display:inline;
+    }
 }
 
 #couch{
@@ -150,6 +110,7 @@
     width:25%;
     margin-right:5px;
 }
+
 
 @media screen and (max-width: 767px)  {
    #couch{

@@ -64,12 +64,12 @@ body{
 .next-page{
     padding-right:5px;
 }
-.next-arrow {
-    width:90%; 
+
+#next-arrow {
+    width:30%; 
 }
-.next-arrow:hover{
-    width:91%;
-}
+
+
 
 #compliant-message{
     text-align:center;

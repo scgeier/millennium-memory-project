@@ -224,9 +224,7 @@ $("#politics-button").click(function() {
          $("#eduChart").slideUp(300);
  });
 
-
- 
-         
+      
 d3.select(self.frameElement).style("height", "800px");
 
 });//close document ready function
