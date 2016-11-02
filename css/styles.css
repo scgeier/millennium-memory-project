@@ -3,7 +3,7 @@ body{
 }
 .hamburger{
     float:right;
-    margin-right:7%;
+    margin-right:2%;
 }
 
 .sidenav {
@@ -68,7 +68,6 @@ body{
 #next-arrow {
     width:30%; 
 }
-
 
 
 #compliant-message{
@@ -137,8 +136,14 @@ body{
     }
 }
 
-.headline{
-    font-family:Bookman;
+.mmp-headline{
+    font-family: 'Playfair Display SC', serif;
+    font-size:1.7em;
+}
+
+.small-and{
+    font-family:Bookman bold;
+	font-size:0.8em;
 }
 
 .article{

@@ -11,9 +11,9 @@
 #unilevel-partition {
 		color: white;
 		font-family: sans-serif;
+		height:410px;
 		shape-outside: circle(50%);
 		-webkit-shape-outside:circle(50%);/*Safari*/
-		-moz-shape-outside:circle(50%);/*Firefox*/
 		margin:-50px;
 		float:left;
 		/*position:absolute;
@@ -22,46 +22,73 @@
 		
 	}
 
-/*THIS IS WHERE I'LL NEED TO CREATE THE MOBILE LAYOUT*/
-@media only screen and (max-width: 767px)  {
-   #unilevel-partition{
-	   float:none;
-	   margin:0;
-    }
-}
 	
 .demographic-label{
 	font-size:0.75em;
 }
 	
 #instructions{
-	font-family:Helvetica;
+	font-family:Helvetica Neue;
 	color:black;
 	font-size:0.7em;
 	position:absolute;
-	bottom:50%;
+	bottom:40%;
+	left:4%;
+	margin-bottom:4%;
 }
 
-@media only screen and (min-width:768px) and (max-width: 1024px)  {
+/*THIS IS WHERE I'LL NEED TO CREATE THE MOBILE LAYOUT*/
+@media only screen and (max-width: 767px)  {
+   #unilevel-partition{
+	   float:none;
+	   margin:0;
+	   height:250px;
+    }
    #instructions{
-	   	bottom:68%;
+      bottom:5%;
+   }
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px)  {
+   #instructions{
+	   	bottom:65%;
     }
 }
 
-#pull-quote{
-	width:20%;
+
+#pull-quote, #more-pull-quote{
+	width:25%;
 	float:right;
-	margin:10px 0px 10px 10px;
-	font-size:1.7em;
+	margin:10px;
+}
+
+.pull-quote-percent{
+    font-family: 'Playfair Display SC', serif;
+	font-size:4em;
+}
+
+.pull-quote-text{
+    font-size:1em;
 	font-family:Bookman bold;
+	position:absolute;
+	width:10%;
+	padding:5px 5px 0 0;	
+}
+
+#more-pull-quote{
+    display:none;
+	line-height:0.8;
 }
 
 @media screen and (max-width: 767px)  {
-   #pull-quote{
-	   width:60%;   
+   #pull-quote, #more-pull-quote{
+	   display:none;
     }
 }
-
+#more-button{
+    font-size:0.9em;
+	color:red;
+}
 #fireworks{
 	width:35%;
 	float:right;

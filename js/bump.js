@@ -39,7 +39,8 @@ var tooltip = d3.select("body").append("div")
                 .style("position", "absolute")
                 .style("background", "white")
                 .style("border", "1px solid gray")
-                .style("width", "25%")
+                .style("width", "40%")
+                .style("padding", "5px")
                 .style("opacity", 0);
   
   
@@ -95,7 +96,7 @@ var dots = svg.selectAll(".dot")
       .style("fill", function(d){return color(d.score);})
       
 //Show the tooltip on mouseover//
-      .on("mouseenter", function(d){
+      .on("click", function(d){
          //document.getElementById("article-intro").className = "fade-out";
          tooltip.transition(d)
           .delay(200)
@@ -108,6 +109,7 @@ var dots = svg.selectAll(".dot")
         tooltip.html("'" + "<em>" + d.memory + "</em>" + "'")
         
         console.log(d.name);
+        document.getElementById("page-content").style.opacity = "0.2";
       })
       
 //Remove tooltip on mouseout//
@@ -115,6 +117,7 @@ var dots = svg.selectAll(".dot")
         //document.getElementById("article-intro").className = "fade-in";
          tooltip.transition().style("opacity", 0)
          console.log("mouseout");
+         document.getElementById("page-content").style.opacity = "1";
       });
 
   });//close d3.json
