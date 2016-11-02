@@ -12,6 +12,8 @@
 		color: white;
 		font-family: sans-serif;
 		shape-outside: circle(50%);
+		-webkit-shape-outside:circle(50%);/*Safari*/
+		-moz-shape-outside:circle(50%);/*Firefox*/
 		margin:-50px;
 		float:left;
 		/*position:absolute;

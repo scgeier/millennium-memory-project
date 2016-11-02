@@ -75,8 +75,10 @@ body{
     text-align:center;
     margin-top:20%;
     background:white;
-    font-family: 'VT323', monospace;
+    /*font-family: 'VT323', monospace;    //old school, 90's bitmap font*/
+    font-family:Helvetica Neue;
     font-size:1.2em;
+    font-weight:200;
 }
 
 
@@ -113,8 +115,10 @@ body{
     font-family:Garamond;
     line-height:50%;
     shape-outside:circle(50%);
+    -webkit-shape-outside:circle(50%);/*Safari*/
     margin:20px 20px 20px 0px;
 }
+
 
 @media screen and (max-width: 767px)  {
    #big-letter{
@@ -153,6 +157,7 @@ body{
 
 #computer-guy{
     width:40%;
+    -moz-width:40%;
     float:right;
 }
 
@@ -161,6 +166,7 @@ body{
         width:60%;
     }
 }
+
 /*Kindle Fire*/
 @media screen and (min-width:1600px) {
     body{

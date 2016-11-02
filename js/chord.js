@@ -172,7 +172,6 @@ var bp2=viz.bP()
 		.height(360)
 		.width(300)
 		.barSize(25)
-		//.sortPrimary(LessHighSchoolSomeCollegeAssociatesBachelorsGraduate)
 		.fill(d=>eduColor[d.primary]);
         
         

@@ -13,9 +13,9 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css"/> 
 </head>
 
-<body onload="playAudio();">
+<body onload="playAudio(); checkBrowser();">
  <div class="row" id="compliant-message">
-  This website is Y2K compliant.
+  This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
  </div>
    <audio id="modem">
     <source src="audio/modem_no_arnold.mp3" type="audio/mp3">
@@ -71,9 +71,16 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
 }
+
 function playAudio() {
  var sound = document.getElementById("modem");
      sound.play();
+}
+//
+function checkBrowser() {
+  if(navigator.userAgent.indexOf("Firefox") != -1){
+       document.getElementById("firefox-msg").style.display = "block";
+    }
 }
 </script>
 <script>

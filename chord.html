@@ -3,12 +3,12 @@
  <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width" />
-  <title>Where We Were</title>
+  <title>Who We Were With</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 <link rel="stylesheet" type="text/css" href="css/chord.css"/>
  </head>
-<body>
+<body onload="checkBrowser();">
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="intro.html">Introduction</a>
@@ -136,6 +136,7 @@ For this section of the research, I had to exclude people who were underage at t
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="http://vizjs.org/viz.v1.1.1.min.js"></script>
+<script src="js/viz.v1.1.1.min.js"></script>
 <script src="js/chord.js"></script>
 <script>
 function openNav() {
@@ -148,6 +149,11 @@ function closeNav() {
     document.getElementById("page-content").style.opacity = "1";
 }
 
+function checkBrowser() {
+  if(navigator.userAgent.indexOf("Safari") != -1){
+       console.log('The data visualization on this page requires the latest version of Safari');
+    }
+}
 
 </script>
 <script>
