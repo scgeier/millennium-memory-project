@@ -1,6 +1,4 @@
-body{
-    margin:2%;
-}
+
 .hamburger{
     float:right;
     margin-right:2%;
@@ -126,6 +124,15 @@ body{
     }
 }
 
+/*Mac desktop, 21.5 inch*/
+@media screen and (min-width: 1919px)  {
+   #big-letter{
+        font-size:10em;
+        margin:10px;
+    }
+}
+
+
 #lead{
     font-size:1.7em;
 }
@@ -173,10 +180,16 @@ body{
 }
 
 /*Kindle Fire*/
-@media screen and (min-width:1600px) {
+@media screen and (min-width:1600px) and (max-width:1919px) {
     body{
         font-size:3em;
         margin:10% 0% 0% 0%;
+    }
+}
+
+@media screen and (min-width:1919px){
+    .container{
+        min-width:90%;
     }
 }
 

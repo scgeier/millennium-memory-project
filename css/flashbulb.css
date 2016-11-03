@@ -1,12 +1,4 @@
-/*CSS for Unilevel Partition chart*/
-
-/*#chart-area{
-	float:left;
-	width:50%;
-	background:yellow;
-	border-radius:0 220px 220px 0;
-}*/
-
+/*Flashbulb Memory and the Turn of the Millennium page*/
 
 #unilevel-partition {
 		color: white;
@@ -22,7 +14,6 @@
 		
 	}
 
-	
 .demographic-label{
 	font-size:0.75em;
 }
@@ -37,7 +28,7 @@
 	margin-bottom:4%;
 }
 
-/*THIS IS WHERE I'LL NEED TO CREATE THE MOBILE LAYOUT*/
+/*Phones*/
 @media only screen and (max-width: 767px)  {
    #unilevel-partition{
 	   float:none;
@@ -49,12 +40,21 @@
    }
 }
 
+/*Tablet*/
 @media only screen and (min-width:768px) and (max-width: 1023px)  {
    #instructions{
 	   	bottom:65%;
     }
 }
-
+/*Mac desktop, 21.5 inch*/
+@media only screen and (min-width:1919px) {
+   #instructions{
+	   	top:40%;
+    }
+   #flashbulb-page{
+        margin-top:5%;
+   }
+}
 
 #pull-quote, #more-pull-quote{
 	width:25%;
@@ -85,10 +85,12 @@
 	   display:none;
     }
 }
+
 #more-button{
     font-size:0.9em;
 	color:red;
 }
+
 #fireworks{
 	width:35%;
 	float:right;
