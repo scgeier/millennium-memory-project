@@ -13,13 +13,8 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css"/> 
 </head>
 
-<body onload="playAudio(); checkBrowser();">
- <div class="row" id="compliant-message">
-  This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
- </div>
-   <audio id="modem">
-    <source src="audio/modem_no_arnold.mp3" type="audio/mp3">
-   </audio>
+<body onload="checkBrowser();">
+
 
 <div id="page-fade-in">
  <div id="mySidenav" class="sidenav">
@@ -86,8 +81,7 @@ function checkBrowser() {
 <script>
  $( document ).ready(function() {
     console.log( "ready!" );
-    $( "#page-fade-in").delay(3000).fadeToggle(3000);
-    $( "#compliant-message").fadeIn(300).delay(3000).fadeToggle(200); 
+    $( "#page-fade-in").fadeToggle(500);
 });
 </script>
 </body>

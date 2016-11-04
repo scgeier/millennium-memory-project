@@ -1,6 +1,6 @@
 .splash-title-area{
     position:absolute;
-    z-index:10;
+    z-index:3;
 }
 
 .splash-title{
@@ -36,13 +36,12 @@
     top:5%;
     right:5%;
     width:50%;
-    z-index:3;
 }
 
 .jack{
     width:85%;
     margin-left:5%;
-    z-index:1;
+    z-index:2;
 }
 
 .cord{
@@ -53,21 +52,27 @@
     z-index:2;
 }
 
- .a {
-        fill: #fff;
-      }
 
-      .b {
-        fill: #d1cfcf;
-      }
+#compliant-message{
+    display:none;
+    text-align:center;
+    margin-top:20%;
+    background:white;
+    /*font-family: 'VT323', monospace;    //old school, 90's bitmap font*/
+    font-family:Helvetica Neue;
+    font-size:1.2em;
+    font-weight:200;
+}
 
-      .c {
-        fill: #f5f3f3;
+/*Change z-index of the title and illustration on mobile and tablet, so the drag and drop works*/
+@media screen and (max-width:1236px){
+      .splash-title-area{
+        z-index:1;
       }
-
-      .d {
-        fill: #f8f7f7;
-      }
+      .cord, .jack{
+        z-index:200; 
+        }
+}
 
 /*iPHONE 5, PORTRAIT*/
 @media screen and (min-width:320px) and (max-width:767px){

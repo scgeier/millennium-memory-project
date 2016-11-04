@@ -67,18 +67,6 @@
     width:30%; 
 }
 
-
-#compliant-message{
-    text-align:center;
-    margin-top:20%;
-    background:white;
-    /*font-family: 'VT323', monospace;    //old school, 90's bitmap font*/
-    font-family:Helvetica Neue;
-    font-size:1.2em;
-    font-weight:200;
-}
-
-
 #page-fade-in {
     display:none;
 }

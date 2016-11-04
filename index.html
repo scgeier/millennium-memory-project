@@ -15,7 +15,11 @@
 </head>
 
 <body>
+
 <div class="container">
+<div class="row" id="compliant-message">
+  This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
+ </div>
   <div class="splash-title-area">
    <p class="splash-title">Millennium<br>Memory<br>Project</p>
    <p id="subtitle">a story in sound and numbers</p><br>
@@ -23,13 +27,13 @@
 </div>
   
  <div id="cover-illustration">
-     <img class="cord" id="draggable" src="img/neat-cord.svg">
+     <img class="cord" id="draggable" src="img/neat-cord.svg" onmouseup="playSound();">
      <img class="jack" id="droppable" src="img/phone-jack-smaller-hole.svg">
  </div>
 </div>
 
   <audio id="myAudio">
-    <source src="audio/click.mp3" type="audio/mp3">
+    <source src="audio/click-modem-combo.mp3" type="audio/mp3">
   </audio>
  
  
@@ -43,19 +47,39 @@
 
 <!--JQuery UI drag and drop-->
   <script>
+var sound = document.getElementById("myAudio");
+
   $( function() {
+    $('.cord').bind( "touchstart", function(e){
+          console.log("getting audio");
+          sound.load();
+    });
+    $('.cord').bind( "touchend", function(e){
+          console.log("playing audio");
+          sound.play();
+    });
+         
+         
     $( "#draggable" ).draggable();
     $( "#droppable" ).droppable({
        drop: function( event, ui ) {
         $( this )
-          var sound = document.getElementById("myAudio");
-              sound.play();
+        $( ".splash-title-area").hide();
+        $( "#cover-illustration").hide(); 
+        $( "#compliant-message").show().delay(4000).fadeToggle(500);
            setTimeout(function() {
             window.location.assign("intro.html");
-             }, 500);
+             }, 7000);
       }
     });
      });
+  </script>
+  <script>
+    function playSound() {
+      var sound = document.getElementById("myAudio");
+          sound.load();
+          sound.play();
+    }
   </script>
 </body>
 </html>
