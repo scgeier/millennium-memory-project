@@ -17,9 +17,16 @@
 <body>
 
 <div class="container">
-<div class="row" id="compliant-message">
+ <div class="row" id="compliant-message">
   This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
  </div>
+  <div class="row" id="loader-area">
+    <div class="col-xs-2 col-xs-offset-5">
+        <div class="loader"></div>
+    </div>
+  </div>
+
+
   <div class="splash-title-area">
    <p class="splash-title">Millennium<br>Memory<br>Project</p>
    <p id="subtitle">a story in sound and numbers</p><br>
@@ -66,7 +73,8 @@ var sound = document.getElementById("myAudio");
         $( this )
         $( ".splash-title-area").hide();
         $( "#cover-illustration").hide(); 
-        $( "#compliant-message").show().delay(4000).fadeToggle(500);
+        $( "#compliant-message").show().delay(5000).fadeToggle(500);
+        $( "#loader-area").show().delay(5000).fadeToggle(500);
            setTimeout(function() {
             window.location.assign("intro.html");
              }, 7000);
