@@ -102,7 +102,7 @@ var dots = svg.selectAll(".dot")
          tooltip.transition(d)
           .delay(200)
           .ease("quad-in")
-          .attr("class", "memory-text")
+          .attr("id", "selected-memory")
           .style("opacity", .95)
           .style("width", phoneWidth)
           .style("left", phoneLeftPos)
@@ -115,7 +115,7 @@ var dots = svg.selectAll(".dot")
       
         var elClose = document.getElementById("close-button");
         elClose.onclick = function(){
-          document.getElementsByClassName("tooltip").style.opacity = "0";
+          document.getElementById("selected-memory").style.opacity = "0";
         };
       
       function phoneWidth() {

@@ -26,12 +26,6 @@
 }
 
 
-@media screen and (max-width:767px){
-   .tooltip{
-      color:blue;
-    }
-}
-
 
 @media screen and (min-width: 767px) and (max-width:1919px){
    #chart{
