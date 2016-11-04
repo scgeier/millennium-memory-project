@@ -58,6 +58,10 @@
  $(document).ready(function(){
  //Don't use the responsive SVG canvases in iPad landscape and desktop viewports//
    var w = "";
+   $("#close-button").click(function(){
+      $(this).hide();
+   });
+   
    $(document).ready(function(){
      w = $(window).width();
      console.log(w);

@@ -18,6 +18,20 @@
     display:none;
 }
 
+#close-button{
+    color:#cc0000;
+    float:right;
+    font-size:1.3em;
+    padding:0% 2% 0% 0%;
+}
+
+
+@media screen and (max-width:767px){
+   .tooltip{
+      color:blue;
+    }
+}
+
 
 @media screen and (min-width: 767px) and (max-width:1919px){
    #chart{

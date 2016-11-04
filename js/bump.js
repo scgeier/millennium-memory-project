@@ -93,6 +93,7 @@ var dots = svg.selectAll(".dot")
       .attr("cy", function(d) { return y(d.score);})
       .style("stroke", "gray")
       .style("stroke-width", "1px")
+      .style("cursor", "pointer")
       .style("fill", function(d){return color(d.score);})
       
 //Show the tooltip on mouseover//
@@ -103,13 +104,36 @@ var dots = svg.selectAll(".dot")
           .ease("quad-in")
           .attr("class", "memory-text")
           .style("opacity", .95)
-          .style("left", (d3.event.pageX) + "px")
+          .style("width", phoneWidth)
+          .style("left", phoneLeftPos)
           .style("top", (d3.event.pageY) + "px")
   
-        tooltip.html("'" + "<em>" + d.memory + "</em>" + "'")
+        tooltip.html("'" + "<span id='close-button'>✖</span>" + "<em>" + d.memory + "</em>" + "'")
         
         console.log(d.name);
         document.getElementById("page-content").style.opacity = "0.2";
+      
+        var elClose = document.getElementById("close-button");
+        elClose.onclick = function(){
+          document.getElementsByClassName("tooltip").style.opacity = "0";
+        };
+      
+      function phoneWidth() {
+        if (window.innerWidth < 767) {
+            return "90%";
+        }else{
+          return "40%";
+        }
+      }
+      
+      function phoneLeftPos() {
+        if (window.innerWidth < 767) {
+            return "5%";
+        }else{
+          return (d3.event.pageX) + "px";
+        }
+      }
+        
       })
       
 //Remove tooltip on mouseout//
