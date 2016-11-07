@@ -150,11 +150,16 @@ function closeNav() {
     document.getElementById("page-content").style.opacity = "1";
 }
 
+
 function checkBrowser() {
-  if(navigator.userAgent.indexOf("Safari") != -1){
-       console.log('The data visualization on this page requires the latest version of Safari');
+    console.log("checking browser for arrow function capability...");
+    try {
+        eval('() => {}');
+    } catch(err) {
+        alert("This chart on this page requires iOS 10.0+");
+        console.log("testing");
     }
-}
+};
 
 </script>
 <script>
