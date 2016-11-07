@@ -196,14 +196,15 @@
   <!--<path class="h" d="M306.86,355.9c-4.72.64-10.25,2.24-16.4,2.28l-15.62.64-.14-29.28,0-22.18c.08-14.65.26-29,.51-43.41.51-28.74,1.34-57.37,2.38-87.64C278.45,141,278.88,109.77,279,75c.05,9.62-.37,19.3.19,29l3.3,56.32c1,17.58,2.94,39,2.43,59-1.18,50.12.14,72.1.1,60.09,0,8.07,1.66,13.88,2.16,21.89.29,8.07.08,15.75-.26,23.2l-1.08,21.37a5.08,5.08,0,0,1,.36,1.15,1.58,1.58,0,0,1,.86,0l.36.12.1,0h.35l.87,0,3.46.15,6.86.33,13.84.66c9.4.4,19.3.65,30.71.41l-4.09.69L350,350C337.68,352.13,321.22,354,306.86,355.9Z" transform="translate(-225.41 -29.51)"/>-->
 </svg>
     <div id="screen">
-     <video id="slidecast">
+     <!--<video id="slidecast">
       <source src="audio/slidecast2.webm" type="video/webm" preload="metadata">
       <source src="audio/slidecast2.mp4" type="video/mp4" preload="metadata">
 Your browser does not support the video tag.
-     </video>
+     </video>-->
+<iframe id="vimeo-slidecast" src="https://player.vimeo.com/video/190618162" width="512" height="288" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
      </div>
-
-  </div>
+  </div><!--close slidecast wrapper-->
+    
  <div class="col-xs-12 col-md-3" id="slidecast-text">
   <p class="article-text">For this project, I interviewed 37 people, from all walks of life, and recorded more than five and a half hours of audio. The story took me from bus stations to farmers' markets to fishing piers. And a funny thing happened along the way. More often than not, in mid-conversation with a total stranger, I got the peculiar feeling that we <em>already knew each other</em>.<br><br>At first, I thought this was because we shared the same core set of memories from the turn of the millennium -- countdowns and computers and all that. But I soon realized it was something else, something more sublime.<br><br>This slidecast is my attempt to explain what that thing is, in three minutes.
  </div>
@@ -226,6 +227,8 @@ Your browser does not support the video tag.
  </div>
  
  
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
 <!--Bootstrap JS CDN-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -234,25 +237,42 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("page-content").style.opacity = "0.1";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
 }
-
 var vid = document.getElementById("slidecast");
-
 function playVid() {
     vid.play();
 }
-
 function pauseVid() {
     vid.pause();
 }
-
 function fullScreen() {
     vid.webkitEnterFullScreen();
 }
+</script>
+<script>
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+    player.portrait = false;
+    var vid = document.getElementById("vimeo-slidecast");
+    
+    function playVid() {
+             player.play();
+          };
+          
+    function pauseVid() {
+            player.pause();
+          };
+
+    player.on('play', function() {
+        console.log('played the video!');
+    });
+
+    player.getVideoTitle().then(function(title) {
+        console.log('title:', title);
+    });
 </script>
 </body>
 </html>
