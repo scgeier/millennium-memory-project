@@ -11,7 +11,7 @@ var legend = d3.select("#legend")
     .append("svg")
 //responsive SVG needs these 2 attributes and no width and height attr
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 710 400")
+    .attr("viewBox", "0 0 710 100")
    //class to make it responsive
     .classed("svg-content-responsive", true)
     .attr("class", "legend-box");
@@ -21,7 +21,7 @@ var legendData = [
       {
         cx: 50,
         fill:0,
-        title:"Not At All"
+        title:"0"
       },
       {
         cx: 75,
@@ -106,7 +106,7 @@ var legendData = [
       {
         cx: 500,
         fill:17,
-        title:"Vivid"
+        title:"17"
       }
       ];
 
@@ -229,9 +229,8 @@ legend.selectAll("text")
       .attr("x", function(d) { return (d.cx - 5); })
       .attr("y", 30)
       .attr("font-family", "sans-serif")
-      .attr("font-size", "0.8em")
+      .attr("font-size", "1.2em")
       .attr("fill", "black")
-      
       .text( function (d) {return d.title;});
    
 

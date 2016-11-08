@@ -30,15 +30,18 @@
  
  <div id="legend" class="svg-legend-container">
   <form id="radio-options">
-  <label>Residence on:</label><br>
-  <input type="radio" name="residence" value="then" id="then" onclick="restoreData()" checked>   December 31, 1999
-  <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData()">   August 1, 2016
+  <label>Residence in:</label><br>
+  <input type="radio" name="residence" value="then" id="then" onclick="restoreData()" checked>   1999
+  <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData()">   2016
 </form>
-    <h4 id="legend-label">Millenniun Memory Score</h4>
+    <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails();">ℹ️</span></h5>
+    <div id="map-legend-tooltip" style="display:none;">
+     <span id="btn-close" onclick="closeLegendTooltip();">✖️</span><p>The scores indicate the range of vividness in respondents' memories from the night of New Year's Eve 1999, from zero (essentially non-existent) to 17 (incredibly vivid).<br><br>Scores were averaged for cities with multiple respondents.</p>
+    </div>
  </div>
 </div>
 <div id="article-area">
- <h2 class="mmp-headline" id="map-headline"><span>Where We Were</span></h2>
+ <h2 class="mmp-headline" id="map-headline">Where We Were</h2>
 <p class="article-text">Most conversations about a flashbulb memory start with the same question: “Do you remember where you were when...?” Location is crucial to the memory; the little details about your surroundings are usually what give the memory such a peculiar, autobiographical context, and they’re what make the stories so fascinating. Ask a Baby Boomer where she was when Kennedy was shot, and she’ll end up telling you about the color of the trays in her middle school cafeteria.</br><br>So for the Millennium Memory <span id="msg">New Yorkers' memories were 24% more vivid than the average</span><span id="msg2">People who have moved since 1999 scored 13% higher on the memory survey than those who've stayed put</span>Project, I wanted to know where people were when the clock struck midnight. I wanted to see it on a map, and find out if there was any correlation between the strength of the memories and where those memories were formed.<br><br>This map shows where each of the respondents to the Millennium survey lived in 1999. The color of the dots corresponds to the vividness of their memories.<br><br>New Year’s Eve in America has long been associated with New York and the ball drop in Times Square, and perhaps not surprisingly, people who were living in the New York area at the turn of the millennium have more vivid memories from that night -- 24 percent more vivid than the average, to be precise. More surprising is the fogginess of millennium memories on the West Coast; people in Los Angeles scored 21 percent <em>lower</em> on the memory survey than the overall average. Small sample size may account for much of the difference (see my Methods and Limitations).<br><br>Time zones may have also played a role. During several of my in-person interviews, people remembered watching the New Year’s celebrations on TV in earlier countries around the world to find out if the Y2K bug was wreaking havoc before it hit the United States. When they saw that Australia, for example, was doing fine, they realized it was a non-event, and the rest of the night became a blur. By the time it was midnight on the West Coast, it was old news.<br><br>Since I was already asking people where they lived in 1999, I was curious to know where they lived now. Click the 2016 button to see the results. Sixty percent of respondents have moved to another city since December 31, 1999. That group of movers scored 13 percent higher on the memory survey than the people who’ve stayed put.</p>
 </div>
 </div>
@@ -81,6 +84,7 @@ $(document).ready(function(){
        $("#map").removeClass("svg-map-container");
        $("#legend").removeClass("svg-legend-container");
        $(".map-content").removeClass("svg-content-responsive");
+       $("#legend").removeClass("svg-content-responsive");
      }
      if (w > 767 && w < 1920) {
        $(".map-content").width(768);
@@ -111,6 +115,20 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("page-content").style.opacity = "1";
+}
+
+function showLegendDetails(e) {
+    var legendTooltip = document.getElementById("map-legend-tooltip");
+    var x = event.clientX;
+    var y = event.clientY;
+    console.log(x + "," + y);
+    legendTooltip.style.display = "block";
+    legendTooltip.style.top = (y - 200) + "px";
+    legendTooltip.style.left = (x - 200) + "px";
+};
+
+function closeLegendTooltip(args) {
+    document.getElementById("map-legend-tooltip").style.display = "none";
 }
 
 function checkSafariPhones() {

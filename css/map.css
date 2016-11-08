@@ -4,26 +4,26 @@
   /*margin-right:10px;*/
 }
 
-
 #map{
   shape-outside: polygon(100% 0, 95% 20%, 90% 30%, 85% 40%, 88% 50%, 80% 90%, 85% 100%, 0 100%, 0 0);
   -webkit-shape-outside: polygon(100% 0, 95% 20%, 90% 30%, 85% 40%, 88% 50%, 80% 90%, 85% 100%, 0 100%, 0 0);
   -moz-shape-outside: polygon(100% 0, 95% 20%, 90% 30%, 85% 40%, 88% 50%, 80% 90%, 85% 100%, 0 100%, 0 0);
 }
 
-@media and screen (max-width:767px){
+@media screen and (max-width:767px){
   #map, #legend{
 	float:none;
+	margin-left:-10px;
   }
-  #legend{
-	max-width:280px;
+  #article-area{
+	margin-top:-10%;
   }
 }
 
 /*Mac desktop, 21.5 inch*/
 @media only screen and (min-width:1919px) {
    #map-page{
-        margin-top:5%;
+    margin-top:5%;
    }
    #map-area{
 	max-width:50%;
@@ -34,25 +34,20 @@
     display: inline-block;
     position: relative;
     width: 100%;
+	margin-top:15%;
     padding-bottom: 100%; /* aspect ratio */
-    vertical-align: left;
     overflow: hidden;
 }
 
 .svg-legend-container {
     display: inline-block;
-    position: absolute;
+    position: relative;
+	margin-top:-30%;
     width: 100%;
-    padding-top:60%; /* aspect ratio */
-    vertical-align: left;
+    padding-top:0%; /* aspect ratio */
     overflow: hidden;
 }
 
-@media and screen (min-width:767px){
-  .svg-map-container{
-	width:200px;
-  }
-}
 
 .land {
   fill: #cccccc;
@@ -79,6 +74,26 @@
   margin-left:8%;
 }
 
+#map-legend-info-button{
+  cursor:pointer;
+}
+
+#map-legend-tooltip{
+  width:250px;
+  padding:5px;
+  position:fixed;
+  overflow:hidden;
+  background:white;
+  opacity:0.9;
+  transition:0.5s;
+}
+
+#btn-close{
+  float:right;
+  padding:5px;
+  cursor:pointer;
+}
+
 #radio-options {
   font-family:Helvetica;
   font-size:1em;
@@ -94,10 +109,19 @@
 #msg, #msg2{
   width:20%;
   float:right;
-  font-family:Bookman, serif;
+  font-family:Bookman bold, serif;
+  font-weight:900;
   font-size:1.5em;
   line-height:1;
   margin:5px 0px 5px 10px;
+}
+
+@media screen and (max-width:767px){
+  #msg, #msg2{
+	width:50%;
+	padding-left:2%;
+	border-left:1px dotted black;
+  }
 }
 
 #msg2{
