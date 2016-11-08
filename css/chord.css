@@ -118,6 +118,13 @@
     }
 }
 
+#browser-msg{
+    padding:40% 10% 10% 10%;
+    font-family:Helvetica Neue;
+    font-weight:300;
+    text-align:center;
+}
+
 .a {
         fill: #f2f1ee;
       }

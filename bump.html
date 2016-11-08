@@ -33,20 +33,20 @@
  </div>
  <div class="row" id="bump-article-section2">
   <div class="col-xs-12">
-   <p class="article-text" id="bump-article-text2">However, as this scatterplot diagram shows, this was not the case. Seventy-nine percent of survey respondents who were in their teens or 20s at the turn of the millennium have flashbulb memories of that night, compared to only 59 percent of people from other age groups. These “reminiscence bumpers” are now in their 30s and 40s; their memory scores are clustered at the top of the diagram.<br><br>Hover over the dots to read the individual stories and get an even better sense of the dichotomy. The memories clustered at the top are mostly paragraphs, full of details like the color of a dress, or the name of a boy who was standing nearby at midnight. The dots to the bottom and right of the chart bring up single sentences with vague memories, or no memories at all.</p>
+   <p class="article-text" id="bump-article-text2">However, as this scatterplot diagram shows, this was not the case. Seventy-nine percent of survey respondents who were in their teens or 20s at the turn of the millennium have flashbulb memories of that night, compared to only 59 percent of people from other age groups. These “reminiscence bumpers” are now in their 30s and 40s; their memory scores are clustered at the top of the diagram.<br><br>Click on the dots to read the individual stories and get an even better sense of the dichotomy. The memories clustered at the top are mostly paragraphs, full of details like the color of a dress, or the name of a boy who was standing nearby at midnight. The dots to the bottom and right of the chart bring up single sentences with vague memories, or no memories at all.</p>
    </div>
 </div>
 </div>
 
- <div class="container">
+ <div class="container footer">
   <div class="row">
    <div class="col-xs-1 page-number">
     <h6>3<span class="pipe">|</span></h6>
    </div>
-   <div class="col-xs-9 project-title">
+   <div class="col-xs-8 project-title">
     <h6>Millennium Memory Project</h6>
    </div>
-   <div class="col-xs-2 next-page">
+   <div class="col-xs-3 next-page">
     <a href="map.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
    </div>
   </div>
@@ -69,8 +69,12 @@
        $("#chart").removeClass("svg-scatterplot-container");
        $(".scatterplot-diagram").removeClass("svg-content-responsive");
      }
-     if (w > 767 && w < 1919) {
-       $(".scatterplot-diagram").width(768);
+     if (w > 767 && w < 992) {
+       $(".scatterplot-diagram").width(720);
+       $(".scatterplot-diagram").height(400);
+     }
+        if (w >= 992 && w < 1200) {
+       $(".scatterplot-diagram").width(640);
        $(".scatterplot-diagram").height(400);
      }
        if (w >= 1920) {

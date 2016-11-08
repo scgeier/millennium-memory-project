@@ -15,6 +15,9 @@
   #map, #legend{
 	float:none;
   }
+  #legend{
+	max-width:280px;
+  }
 }
 
 /*Mac desktop, 21.5 inch*/
@@ -40,7 +43,7 @@
     display: inline-block;
     position: absolute;
     width: 100%;
-    padding-top:50%; /* aspect ratio */
+    padding-top:60%; /* aspect ratio */
     vertical-align: left;
     overflow: hidden;
 }

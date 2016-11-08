@@ -1,7 +1,12 @@
+.container{
+    padding-top:2%;
+}
 
 .hamburger{
     float:right;
     margin-right:2%;
+    padding-top:3%;
+    z-index:1000;
 }
 
 .sidenav {
@@ -48,7 +53,11 @@
      transition: 0.5s;
 }
 
-.page-number, .project-title, .next-page{
+.footer{
+    padding-bottom:2%;
+}
+
+.page-number, .project-title{
     float:left;
     font-family:Copperplate;
 }
@@ -60,11 +69,12 @@
 }
 
 .next-page{
-    padding-right:5px;
+    max-width:40%;
 }
 
 #next-arrow {
-    width:30%; 
+    width:25%;
+    margin-left:80%;
 }
 
 #page-fade-in {
@@ -83,6 +93,7 @@
     left:5%;
     width:90%;
 }
+
 
 #methods-closer{
     float:right;
@@ -109,6 +120,18 @@
    #big-letter{
         font-size:10em;
         margin:10px;
+    }
+    .footer{
+        height:33px;
+    }
+    .next-page{
+    max-width:22%;
+    }
+    
+    #next-arrow {
+    width:100%;
+    margin-top:10%;
+    margin-left:0;
     }
 }
 

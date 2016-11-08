@@ -34,6 +34,7 @@
   <div id="eduChart"></div>
   <iframe src="religion.html" id="religionChart"></iframe>
   <iframe src="politics.html" id="politicsChart"></iframe>
+  <div id="browser-msg" style="display:none;"><p><em>This data visualization is not supported by older versions of Mac OS and iOS</em></p></div>
  </div>
  <div id="radio-options">
   <form>
@@ -119,15 +120,15 @@ For this section of the research, I had to exclude people who were underage at t
 </div>
 
 
- <div class="container">
+ <div class="container footer">
   <div class="row">
    <div class="col-xs-1 page-number">
     <h6>5<span class="pipe">|</span></h6>
    </div>
-   <div class="col-xs-9 project-title">
+   <div class="col-xs-8 project-title">
     <h6>Millennium Memory Project</h6>
    </div>
-   <div class="col-xs-2 next-page">
+   <div class="col-xs-3 next-page">
     <a href="slidecast.html"><img id="next-arrow" src="img/mmp-arrow.svg" onmouseover="arrowMove();"></a>
    </div>
   </div>
@@ -156,8 +157,10 @@ function checkBrowser() {
     try {
         eval('() => {}');
     } catch(err) {
-        alert("This chart on this page requires iOS 10.0+");
-        console.log("testing");
+        document.getElementById("eduChart").style.display = "none";
+        document.getElementById("browser-msg").style.display = "inline";
+        document.getElementById("radio-options").style.display = "none";
+        console.log("Older OS detected");
     }
 };
 
