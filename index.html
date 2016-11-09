@@ -73,6 +73,9 @@ var sound = document.getElementById("myAudio");
         $( ".splash-title-area").hide();
         $( "#cover-illustration").hide(); 
         $( "#compliant-message").show().delay(5000).fadeToggle(500);
+          if(navigator.userAgent.indexOf("Firefox") != -1){
+              document.getElementById("firefox-msg").style.display = "block";
+             };
         $( "#loader-area").show().delay(5000).fadeToggle(500);
            setTimeout(function() {
             window.location.assign("intro.html");
@@ -86,7 +89,7 @@ var sound = document.getElementById("myAudio");
       var sound = document.getElementById("myAudio");
           sound.load();
           sound.play();
-    }
+    };
   </script>
 </body>
 </html>

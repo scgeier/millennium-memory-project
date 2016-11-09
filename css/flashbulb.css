@@ -18,7 +18,7 @@
 	font-size:0.75em;
 }
 	
-#instructions{
+/*#instructions{
 	font-family:Helvetica Neue;
 	color:black;
 	font-size:0.7em;
@@ -26,6 +26,38 @@
 	bottom:40%;
 	left:4%;
 	margin-bottom:4%;
+}*/
+
+#partition-info-button{
+  cursor:pointer;
+  position:absolute;
+  top:45%;
+  left:10%;
+  z-index:1000;
+  color:black;
+}
+
+#partition-instructions{
+  width:250px;
+  padding:5px;
+  position:fixed;
+  overflow:hidden;
+  background:white;
+  opacity:0.9;
+  transition:0.5s;
+  z-index:1000;
+}
+
+#partition-info-text{
+  color:black;
+  font-weight:200;
+}
+
+#btn-close{
+  float:right;
+  padding:5px;
+  cursor:pointer;
+  z-index:1000;
 }
 
 /*Phones*/
@@ -35,15 +67,15 @@
 	   margin:0;
 	   height:250px;
     }
-   #instructions{
-      bottom:5%;
+   #partition-info-button{
+      top:70%;
    }
 }
 
 /*Tablet*/
 @media only screen and (min-width:768px) and (max-width: 1023px)  {
-   #instructions{
-	   	bottom:65%;
+   #partition-info-button{
+	   	top:27%;
     }
 }
 /*Mac desktop, 21.5 inch*/
@@ -89,6 +121,7 @@
 #more-button{
     font-size:0.9em;
 	color:red;
+    cursor:pointer;
 }
 
 #fireworks{

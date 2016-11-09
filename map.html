@@ -34,7 +34,7 @@
   <input type="radio" name="residence" value="then" id="then" onclick="restoreData()" checked>   1999
   <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData()">   2016
 </form>
-    <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails();">ℹ️</span></h5>
+    <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle" aria-hidden="true"></i></span></h5>
     <div id="map-legend-tooltip" style="display:none;">
      <span id="btn-close" onclick="closeLegendTooltip();">✖️</span><p>The scores indicate the range of vividness in respondents' memories from the night of New Year's Eve 1999, from zero (essentially non-existent) to 17 (incredibly vivid).<br><br>Scores were averaged for cities with multiple respondents.</p>
     </div>
@@ -72,6 +72,7 @@ $(document).ready(function(){
 </script>-->
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://use.fontawesome.com/12579af943.js"></script>
 <script src="js/map.js"></script>
 <script>
  $(document).ready(function(){
@@ -117,7 +118,7 @@ function closeNav() {
     document.getElementById("page-content").style.opacity = "1";
 }
 
-function showLegendDetails(e) {
+function showLegendDetails(event) {
     var legendTooltip = document.getElementById("map-legend-tooltip");
     var x = event.clientX;
     var y = event.clientY;
@@ -127,7 +128,7 @@ function showLegendDetails(e) {
     legendTooltip.style.left = (x - 200) + "px";
 };
 
-function closeLegendTooltip(args) {
+function closeLegendTooltip() {
     document.getElementById("map-legend-tooltip").style.display = "none";
 }
 

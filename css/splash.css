@@ -174,18 +174,22 @@
        }
 }
 
-/*Kindle Fire, PORTRAIT*/
-@media screen and (min-width:1600px) and (max-width:2560px){
+/*Kindle Fire, PORTRAIT; Dell PC desktops*/
+@media screen and (min-width:1600px) and (max-width:1918px){
+    .splash-title-area{
+        top:2%;
+        left:2%;
+      }
       .splash-title{
-         font-size:12em;
+         font-size:4.5em;
       }
       #subtitle{
-        font-size:4em;
+        font-size:2em;
       }
       
       #plug-in{
-        font-size:3em;
-        margin:20% 20% 0% 0%;
+        font-size:1em;
+        margin:10% 20% 0% 0%;
       }
       
       #pointer{
@@ -204,14 +208,14 @@
         left:10%;
       }
       .splash-title{
-         font-size:5em;
+         font-size:10em;
           }
       #subtitle{
-        font-size:2em;
+        font-size:3em;
       }
       
       #plug-in{
-        font-size:1em;
+        font-size:2em;
         margin:5% 20% 0% 0%;
       }
 
@@ -222,9 +226,5 @@
       #cover-illustration{
         top:20%;
         }
-     .container{
-        background:yellow;
-     }
-
 }
 

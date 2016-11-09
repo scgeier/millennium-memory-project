@@ -27,7 +27,11 @@
 
 <div class="container" id="page-content">
  <div id="unilevel-partition" class="svg-container">
-  <p id="instructions">Click the ring sections to zoom in and <br>see a breakdown by gender, race and marital status<br>Click the center dot to zoom back out</p></div>
+  <div id="partition-instructions" style="display:none;">
+     <span id="btn-close" onclick="closeLegendTooltip();">✖️</span><p id="partition-info-text">Click on the ring sections for a breakdown by gender, race and marital status.<br><br>Click the center dot to zoom back out.</p>
+    </div>
+  <span id="partition-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle"></i></span>
+ </div>
     <h2 class="mmp-headline">Flashbulb Memory <span class="small-and"><em>and the</em></span> Turn of the Millennium</h2>
     <p class="article-text">Let’s start with the main question, the one that set everything else in motion for this project. How many people remember the night of December 31, 1999?<br><br>The chart on this page shows the answer: 68 percent. This number seems remarkably high or low, depending on how you look at it. On the one hand, it’s been 17 years since that night; it’s impressive that more than two-thirds of people still have it etched in their minds. <span id="pull-quote"><span class="pull-quote-percent">68%</span><span class="pull-quote-text"><em>of people vividly remember New Year's Eve 1999<span id="more-button">   more</em></span></span></span><span id="more-pull-quote"><span class="pull-quote-percent">37%</span> <span class="pull-quote-text"><em>of the people in that group had never talked about that night until now.</em></span></span>On the other hand, that moment was about as momentous as you can get (it was the de facto start of a new millennium), and it was loaded with the possibility that the global infrastructure would collapse because of the Y2K bug; it’s remarkable that 32 percent of people have forgotten it.</br><br>The results also revealed some interesting demographic patterns. African-Americans’ memories of New Year’s Eve 1999 were 27 percent more vivid than the average (they scored an average 12.5 on the survey, compared to the overall average of 9.86). Asian-Americans sat on the other end of the spectrum; their memory scores were 28 percent below the overall number.</br></br>Some of this could be attributed to small sample size (please see my <a href="#methods-top"><span id="methods" onclick="showMethods()">Methods and Limitations</span></a> for details). However, it also makes sense that Asian-Americans would have less vivid memories of December 31, 1999, considering that many of them celebrate the Chinese New Year on another date in the calendar.
 
@@ -229,8 +233,24 @@ function closeMethods() {
      document.getElementById("flashbulb-footer").style.opacity = "1";
 }
 
+function showLegendDetails(event) {
+  
+    var legendTooltip = document.getElementById("partition-instructions");
+    var x = event.clientX;
+    var y = event.clientY;
+    console.log(x + "," + y);
+    legendTooltip.style.display = "block";
+    legendTooltip.style.top = (y - 100) + "px";
+    legendTooltip.style.left = (x + 10) + "px";
+};
+
+function closeLegendTooltip() {
+    document.getElementById("partition-instructions").style.display = "none";
+}
+
 </script>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
+<script src="https://use.fontawesome.com/12579af943.js"></script>
 <script src="js/flashbulb.js"></script>
 </body>
