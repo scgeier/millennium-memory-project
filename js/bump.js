@@ -119,10 +119,13 @@ var dots = svg.selectAll(".dot")
         };
       
       function phoneWidth() {
+        console.log(window.innerWidth);
         if (window.innerWidth < 767) {
             return "90%";
-        }else{
+        }else if(window.innerWidth >= 768 && window.innerWidth < 1600){
           return "40%";
+        }else{
+          return "60%";
         }
       }
       

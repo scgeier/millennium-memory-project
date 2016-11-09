@@ -113,6 +113,13 @@ audio {
   width:100%;
 }
 
+@media screen and (min-width:1600px){
+  #kiss{
+    width:80%;
+  }
+}
+
+
       .a {
         fill: none;
       }

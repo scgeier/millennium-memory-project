@@ -34,7 +34,13 @@
   top:45%;
   left:10%;
   z-index:1000;
-  color:black;
+  color:#52527a;
+}
+
+@media screen and (min-width:1920px){
+   #partition-info-button{
+      top:40%;  
+   }
 }
 
 #partition-instructions{
@@ -58,6 +64,7 @@
   padding:5px;
   cursor:pointer;
   z-index:1000;
+  color:black;
 }
 
 /*Phones*/
