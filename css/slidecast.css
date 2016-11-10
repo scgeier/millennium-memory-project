@@ -83,6 +83,14 @@
             }
 }
 
+/*Mac 27 inch desktop*/
+@media screen and (min-width:2300px){
+      #vimeo-slidecast{
+        width:883px;
+        height:497px;
+            }
+}
+
 
  .a, .b, .c, .d, .e, .g {
         fill: none;

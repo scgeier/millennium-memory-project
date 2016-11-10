@@ -137,10 +137,17 @@
 }
 
 /*Mac desktop, 21.5 inch*/
-@media screen and (min-width: 1919px)  {
+@media screen and (min-width: 1919px)  and (max-width:2299px){
    #big-letter{
         font-size:10em;
         margin:10px;
+    }
+}
+
+/*Mac desktop, 27 inch*/
+@media screen and (min-width: 2300px) {
+   #big-letter{
+        font-size:14em;
     }
 }
 

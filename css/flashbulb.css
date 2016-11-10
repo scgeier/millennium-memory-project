@@ -37,9 +37,16 @@
   color:#52527a;
 }
 
-@media screen and (min-width:1920px){
+@media screen and (min-width:1920px) and (max-width:2299px){
    #partition-info-button{
       top:40%;  
+   }
+}
+
+/*Mac 27 inch, full-screen*/
+@media screen and (min-width:2300px){
+   #partition-info-button{
+      top:35%;  
    }
 }
 

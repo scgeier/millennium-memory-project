@@ -39,7 +39,7 @@ var tooltip = d3.select("body").append("div")
                 .style("position", "absolute")
                 .style("background", "white")
                 .style("border", "1px solid gray")
-                .style("width", "40%")
+                //.style("width", "40%")
                 .style("padding", "5px")
                 .style("opacity", 0);
   
@@ -104,21 +104,24 @@ var dots = svg.selectAll(".dot")
           .ease("quad-in")
           .attr("id", "selected-memory")
           .style("opacity", .95)
-          .style("width", phoneWidth)
+          .style("width", "auto")
           .style("left", phoneLeftPos)
           .style("top", (d3.event.pageY) + "px")
   
-        tooltip.html("'" + "<span id='close-button'>✖</span>" + "<em>" + d.memory + "</em>" + "'")
+        tooltip.html("'" + "<span id='close-button'>✖</span>"  + d.memory + "'")
         
         console.log(d.name);
-        document.getElementById("page-content").style.opacity = "0.2";
+        document.getElementById("page-content").style.opacity = "0.05";
+        document.getElementById("bump-footer").style.opacity = "0.05";
+        document.getElementById("bump-burger").style.opacity = "0.05";
+    
       
         var elClose = document.getElementById("close-button");
         elClose.onclick = function(){
           document.getElementById("selected-memory").style.opacity = "0";
         };
       
-      function phoneWidth() {
+      /*function phoneWidth() {
         console.log(window.innerWidth);
         if (window.innerWidth < 767) {
             return "90%";
@@ -127,13 +130,13 @@ var dots = svg.selectAll(".dot")
         }else{
           return "60%";
         }
-      }
+      }*/
       
       function phoneLeftPos() {
         if (window.innerWidth < 767) {
-            return "5%";
+            return "2%";
         }else{
-          return (d3.event.pageX) + "px";
+          return "5%";
         }
       }
         
@@ -145,6 +148,8 @@ var dots = svg.selectAll(".dot")
          tooltip.transition().style("opacity", 0)
          console.log("mouseout");
          document.getElementById("page-content").style.opacity = "1";
+         document.getElementById("bump-footer").style.opacity = "1";
+         document.getElementById("bump-burger").style.opacity = "1";
       });
 
   });//close d3.json

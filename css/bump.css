@@ -18,6 +18,23 @@
     display:none;
 }
 
+.tooltip{
+    margin-right:2%;
+}
+
+#selected-memory{
+    font-size:1em;
+    font-family:Helvetica Neue;
+    font-weight:300;
+}
+
+
+@media screen and (min-width:1920px){
+    #selected-memory{
+    font-size:1.5em;
+    }
+}
+
 #close-button{
     color:#cc0000;
     float:right;
