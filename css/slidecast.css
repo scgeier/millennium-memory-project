@@ -86,9 +86,12 @@
 /*Mac 27 inch desktop*/
 @media screen and (min-width:2300px){
       #vimeo-slidecast{
-        width:883px;
-        height:497px;
+        width:921px;
+        height:518px;
             }
+      #screen{
+        left:10%;
+      }
 }
 
 
