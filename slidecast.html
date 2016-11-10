@@ -185,7 +185,7 @@
     <path class="g" d="M512.5,452.75" transform="translate(-225.41 -29.51)"/>
     <path class="g" d="M532.5,452.5" transform="translate(-225.41 -29.51)"/>
     <g>
-      <rect id="full-screen-button" class="f" onclick="fullScreen()" x="281.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
+      <rect id="full-screen-button" class="f" onclick="toggleFullScreen();" x="281.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
       <path d="M532.3,455l-3.93,0c-2.5,0-6.07.15-10.35.22l-3.34,0h-1.76a7.28,7.28,0,0,1-1.88-.17,5.24,5.24,0,0,1-3.89-4.2,11.11,11.11,0,0,1-.05-2c.06-2.68.08-5.44.09-8.26a6.76,6.76,0,0,1,.2-2.13,5,5,0,0,1,1-1.9,5.2,5.2,0,0,1,3.88-1.84c5.71-.09,11.42-.16,16.78-.18h2a16.21,16.21,0,0,1,2,.07,5.4,5.4,0,0,1,3.45,2,5.34,5.34,0,0,1,1.15,3.57l-.05,3.34-.14,5.85a6,6,0,0,1-.41,2.43,5.37,5.37,0,0,1-1.17,1.73,5.17,5.17,0,0,1-2.56,1.36,5.11,5.11,0,0,1-.77.09Zm0-.08.26,0a4.9,4.9,0,0,0,4.57-5.53l-.14-5.85-.05-3.34a4.73,4.73,0,0,0-1-3.09,4.63,4.63,0,0,0-2.94-1.69,15.53,15.53,0,0,0-1.9-.05h-2c-5.35,0-11.07-.09-16.78-.18a4.85,4.85,0,0,0-3.66,1.62,4.77,4.77,0,0,0-1,1.79,6.51,6.51,0,0,0-.22,2.06c0,2.81,0,5.58.09,8.26a10.86,10.86,0,0,0,.12,1.94,4.72,4.72,0,0,0,.72,1.69,4.85,4.85,0,0,0,2.85,2,6.67,6.67,0,0,0,1.73.13h1.76l3.34,0c4.28.08,7.85.2,10.35.22Z" transform="translate(-225.41 -29.51)"/>
     </g>
     <path d="M519,439.55a4.34,4.34,0,0,1-2.25.37c-.37-.06-.75-.22-1.12-.25a3.44,3.44,0,0,0-1.12.11l.27-.27a6.24,6.24,0,0,1,.2,1.12,8.39,8.39,0,0,1,.06,1.13,6.6,6.6,0,0,1-.48,2.25h-.1a6.6,6.6,0,0,1-.48-2.25,8.39,8.39,0,0,1,.06-1.12,6.24,6.24,0,0,1,.2-1.12l.08-.32.19,0a3.44,3.44,0,0,0,1.12.11c.38,0,.75-.19,1.13-.25a4.34,4.34,0,0,1,2.25.37Z" transform="translate(-225.41 -29.51)"/>
@@ -248,9 +248,18 @@ function playVid() {
 function pauseVid() {
     vid.pause();
 }
-function fullScreen() {
-    vid.webkitEnterFullScreen();
+
+function toggleFullScreen() {
+ var elem = document.getElementById("screen");
+  if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+  } else {
+      alert("Your browser does not support this full-screen method. Please click the icon in the bottom right corner of the TV screen.");
+    }
 }
+
+
+
 </script>
 <script>
     var iframe = document.querySelector('iframe');
@@ -260,6 +269,9 @@ function fullScreen() {
     
     function playVid() {
              player.play();
+             if (window.innerWidth < 1024) {
+                alert("Your mobile OS requires you to tap the icon in the TV screen to play the video.");
+             }
           };
           
     function pauseVid() {
