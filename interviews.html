@@ -2,10 +2,11 @@
 <meta charset="utf-8">
 <html ng-app="myApp" ng-controller="BaseController as base">
     <head>
-        <title>Audio Archive</title>
+        <title>Time Capsule</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 <link rel="stylesheet" type="text/css" href="css/interviews.css"/>
     </head>
@@ -151,7 +152,7 @@
         <td class="location">{{interview.interviewLocation}}</td>
         <!--<td>{{interview.duration}}</td>-->
         <td class="transcript"><a href="/{{interview.transcript}}" target="_blank"><img src="img/adobe-icon.png" class="pdf-icon"/></a></td>
-        <td><audio id="test" src="{{interview.audio}}"controls preload="auto"></audio></td>
+        <td><audio id="test" src="{{interview.audio}}"controls preload="metadata"></audio></td>
       </tr>
   </table>
   </div><!--close table area col-->
@@ -178,7 +179,7 @@
     <h6>7<span class="pipe">|</span></h6>
    </div>
    <div class="col-xs-10 project-title">
-    <h6>Millennium Memory Project</h6>
+    <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
    </div>
    <div class="col-xs-1 next-page">
    </div>

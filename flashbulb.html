@@ -28,7 +28,10 @@
 <div class="container" id="page-content">
  <div id="unilevel-partition" class="svg-container">
   <div id="partition-instructions" style="display:none;">
-     <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p id="partition-info-text">Click on the ring sections for a breakdown by gender, race and marital status.<br><br>Click the center dot to zoom back out.</p>
+     <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p id="partition-info-text">Click on the ring sections to zoom in for a breakdown by gender, race and marital status.<br><br>Click the center dot to zoom back out.</p>
+    </div>
+    <div id="mobile-partition-instructions" style="display:none;">
+     <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p id="partition-info-text">Double-tap the ring sections to zoom in and see a breakdown by gender, race and marital status.<br><br>Tap the center dot to zoom back out.</p>
     </div>
   <span id="partition-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle"></i></span>
  </div>
@@ -166,7 +169,7 @@ The reason for the more vivid memories among African-Americans is less clear. Du
     <h6>2<span class="pipe">|</span></h6>
    </div>
    <div class="col-xs-8 project-title">
-    <h6>Millennium Memory Project</h6>
+    <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
    </div>
    <div class="col-xs-3 next-page">
     <a href="bump.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
@@ -234,7 +237,17 @@ function closeMethods() {
 }
 
 function showLegendDetails(event) {
-  
+    if (window.innerWidth < 1024) {
+      console.log("mobile tooltip");
+    var legendTooltip = document.getElementById("mobile-partition-instructions");
+    var x = event.clientX;
+    var y = event.clientY;
+    console.log(x + "," + y);
+    legendTooltip.style.display = "block";
+    legendTooltip.style.top = (y - 100) + "px";
+    legendTooltip.style.left = (x + 10) + "px";
+      }else{
+    console.log("desktop tooltip");
     var legendTooltip = document.getElementById("partition-instructions");
     var x = event.clientX;
     var y = event.clientY;
@@ -242,11 +255,18 @@ function showLegendDetails(event) {
     legendTooltip.style.display = "block";
     legendTooltip.style.top = (y - 100) + "px";
     legendTooltip.style.left = (x + 10) + "px";
+      }
 };
 
 function closeLegendTooltip() {
+   console.log("button clicked");
+   if (window.innerWidth < 1024) {
+    console.log("mobile tooltip closed!");
+    document.getElementById("mobile-partition-instructions").style.display = "none";
+    }else{
     document.getElementById("partition-instructions").style.display = "none";
-}
+       }
+};
 
 </script>
 

@@ -17,7 +17,8 @@
     top: 0;
     right: 0;
     background-color: #fff;
-    font-weight:300;
+    font-family:Helvetica;
+    font-weight:100;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -69,6 +70,14 @@
     padding-left:5px;
 }
 
+.splash-link {
+    color:black;
+}
+
+.splash-link:hover{
+    text-decoration:none;
+}
+
 .next-page{
     max-width:40%;
 }
@@ -83,7 +92,11 @@
 }
 
 #methods{
-    color:red;
+    color:#cc0000;
+}
+
+#methods a:hover{
+    text-decoration: none;
 }
 
 #methods-lightbox{
@@ -108,12 +121,18 @@
 
 #big-letter {
     float:left;
-    font-size:22em;
+    font-size:20em;
     font-family:Garamond;
     line-height:50%;
     shape-outside:circle(50%);
     -webkit-shape-outside:circle(50%);/*Safari*/
     margin:20px 20px 20px 0px;
+}
+
+#computer-guy{
+    width:40%;
+    -moz-width:40%;
+    float:right;
 }
 
 
@@ -122,9 +141,17 @@
         font-size:10em;
         margin:10px;
     }
+    
+    #computer-guy{
+    width:60%;
+    -moz-width:60%;
+    float:right;
+    }
+    
     .footer{
         height:33px;
     }
+    
     .next-page{
     max-width:22%;
     }
@@ -186,11 +213,6 @@
     line-height:1.1;
 }
 
-#computer-guy{
-    width:40%;
-    -moz-width:40%;
-    float:right;
-}
 
 @media screen and (min-width:320px) and (max-width: 767px)  {
    #computer-guy{

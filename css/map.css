@@ -76,6 +76,9 @@
 
 #map-legend-info-button{
   cursor:pointer;
+  font-size:1.5em;
+  color:#0066cc;
+  margin-left:2px;
 }
 
 #map-legend-tooltip{
@@ -84,7 +87,7 @@
   position:fixed;
   overflow:hidden;
   background:white;
-  opacity:0.9;
+  opacity:0.95;
   transition:0.5s;
 }
 

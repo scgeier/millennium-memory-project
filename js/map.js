@@ -173,36 +173,7 @@ var svg = d3.select("#map")
            .style("fill", function(d) { return color(d.score); })
           //.on("click", clicked)
            
-           
-//Show the tooltip on mouseover//
-      .on("mouseenter", function(d){        
-         tooltip.transition(d)
-          .delay(200)
-          //.attr("class", "summary")
-          .style("opacity", .7)
-          .style("left", (d3.event.pageX) + "px")
-          .style("top", (d3.event.pageY) + "px")
-  //TRYING TO GET THE TOOLTIP HTML CONTENT TO UPDATE WITH NAMES OF NEW CITIES WHEN USER CHOOSES CURRENT RESIDENCE BUTTON
-  //
-          /*tooltip.html(function(d){
-            if (document.getElementById("then").checked == true) {
-                  return "<h4>" + d.city + "</h4>";
-            }else{
-                  return "<h4>" + d.currCity + "</h4>";
-                   console.log(d.currState);
-                 }
-             })*/
-          
-        tooltip.html("<h6>" + d.city + "," + " " + d.state + "</h6>")
-      })
-      
-//Remove tooltip on mouseout//
-      .on("mouseleave", function(d){
-         tooltip.transition().style("opacity", 0)
-         console.log("mouseout");
-      });
 
-      
        });//close csv call
 });//close the JSON call
  
@@ -280,30 +251,5 @@ function restoreData() {
 
 
 
-//Below is an attempt at adding a zoom capability to the map on click; didn't work//
-/*function clicked(d) {
-  var x, y, k;
-
-  if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = centroid[0];
-    y = centroid[1];
-    k = 4;
-    centered = d;
-  } else {
-    x = width / 2;
-    y = height / 2;
-    k = 1;
-    centered = null;
-  }
-
-  svg.selectAll("path")
-      .classed("active", centered && function(d) { return d === centered; });
-
-  svg.transition()
-      .duration(750)
-      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-      .style("stroke-width", 1.5 / k + "px");
-}*/
 
 

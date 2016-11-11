@@ -93,8 +93,9 @@ for(var i=0;i<root.children.length;i++) {
 //var currentPos = $("#unilevel-partition").offset().left;
 var myColor = d3.scale.linear()
 	.domain([0,146])
-	//.range(["#ffff33", "#e65c00"]);
-	.range(["#1a1aff", "#e6e600"]);
+    .range(["#ffff33", "#008ae6"]);
+	//.range(["#ffff33", "#e65c00"]);//red, orange//
+	//.range(["#1a1aff", "#e6e600"]);//yellow, grayish-blue
     
 var margin = {top: 200, right: 224, bottom: 200, left: 224},
     radius = Math.min(margin.top, margin.right, margin.bottom, margin.left) - 20;
@@ -127,7 +128,8 @@ var tooltip = d3.select("body")
     .attr("id", "tooltip")
     .style("position", "absolute")
     .style("z-index", "10")
-    .style("font-size", "1.2em")
+    .style("background", "white")
+    .style("font-size", "1em")
     .style("opacity", 0);
 
 //Set the percentages in the tooltip to two decimal points
@@ -156,7 +158,7 @@ function mouseOverArc(d) {
             .duration(50)
             .style("opacity", 0.9)
             .style("font-family", "Helvetica")
-			.style("color", "white");
+			.style("color", "black");
         }
 
 function mouseOutArc(){
@@ -218,10 +220,10 @@ var text = g.append("text")
 	.attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
 	.attr("text-anchor","middle")
 	.attr("x", function(d) { return (d.y); })
-    .attr("dx", "6") // margin (position on x axis relative to the absolute x)
+    .attr("dx", "2") // margin (position on x axis relative to the absolute x)
     .attr("dy", ".35em") // vertical-align (position relative to the absolute x position)
     .attr("font-family", "sans-serif")
-	.attr("fill", "white")
+	.attr("fill", "black")
     .attr("class", "demographic-label")
 	.text(function(d) {return d.name; });
 	
