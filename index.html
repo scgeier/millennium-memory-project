@@ -14,9 +14,9 @@
 <link rel="stylesheet" type="text/css" href="css/splash.css"/> 
 </head>
 
-<body>
+<body onload="firefoxPosition();" id="splash-body">
 
-<div class="container">
+<div class="container" id="splash-container">
  <div class="row" id="compliant-message">
   This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
  </div>
@@ -27,7 +27,7 @@
   </div>
 
 
-  <div class="splash-title-area">
+<div class="splash-title-area">
    <p class="splash-title">Millennium<br>Memory<br>Project</p>
    <p id="subtitle">a story in sound and numbers</p><br>
    <p id="plug-in"><em>plug in to begin</em> <span id="pointer">☞</span></p>
@@ -37,11 +37,13 @@
      <img class="cord" id="draggable" src="img/neat-cord.svg" onmouseup="playSound();">
      <img class="jack" id="droppable" src="img/phone-jack-smaller-hole.svg">
  </div>
-</div>
-
-  <audio id="myAudio">
+ 
+   <audio id="myAudio">
     <source src="audio/click-modem-combo.mp3" type="audio/mp3">
   </audio>
+</div>
+
+
  
  
 <!--JQuery CDNs-->
@@ -54,6 +56,15 @@
 
 <!--JQuery UI drag and drop-->
   <script>
+//For Firefox browsers, change illustration positioning from absolute to relative (to fix JQuery draggable bug)//
+function firefoxPosition() {
+   if(navigator.userAgent.indexOf("Firefox") != -1){
+        console.log("Firefox detected");
+        document.getElementById("cover-illustration").style.position = "relative";
+        document.getElementById("cover-illustration").style.left = "55%";
+             };
+}
+  
 var sound = document.getElementById("myAudio");
   $( function() {
     $('.cord').bind( "touchstart", function(e){
