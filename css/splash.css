@@ -13,17 +13,24 @@
     width:100%;
 }
 
-#subtitle{
+#subtitle, #byline{
     font-family:Helvetica Neue;
     font-weight:100;
+}
+
+#subtitle{
     font-size:2em;
+}
+
+#byline{
+    font-size:1.4em;
 }
 
 #plug-in{
     font-family: serif;
     font-weight:200;
     font-size:1.5em;
-    margin:15% 0% 0% 40%;
+    margin:10% 0% 0% 40%;
 }
 
 #pointer{
@@ -111,6 +118,10 @@
         font-size:1em;
       }
       
+      #byline{
+        font-size:0.9em;
+      }
+      
       #plug-in{
         font-size:1em;
         margin:5% 0% 10% 0%;
@@ -134,6 +145,9 @@
       }
       #subtitle{
         font-size:1.2em;
+      }
+      #byline{
+        font-size:1em;
       }
       #pointer{
         font-size:1.2em;
@@ -179,18 +193,21 @@
 @media screen and (min-width:1600px) and (max-width:1918px){
     .splash-title-area{
         top:2%;
-        left:2%;
+        left:5%;
       }
       .splash-title{
          font-size:4.5em;
       }
       #subtitle{
-        font-size:2em;
+        font-size:1.5em;
+      }
+      #byline{
+        font-size:1.2em;
       }
       
       #plug-in{
-        font-size:1em;
-        margin:10% 20% 0% 0%;
+        font-size:1.1em;
+        margin:5% 20% 0% 0%;
       }
       
       #pointer{
@@ -213,6 +230,9 @@
           }
       #subtitle{
         font-size:3em;
+      }
+      #byline{
+        font-size:1.8em;
       }
       
       #plug-in{

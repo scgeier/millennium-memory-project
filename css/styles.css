@@ -45,6 +45,10 @@
     margin-left: 50px;
 }
 
+.facebook{
+    margin:10% 0% 0% 14%;
+    border-radius:20%;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
