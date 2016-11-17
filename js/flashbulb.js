@@ -90,12 +90,12 @@ for(var i=0;i<root.children.length;i++) {
 	root.size+=root.children[i].size;
 }
 
-//var currentPos = $("#unilevel-partition").offset().left;
+
 var myColor = d3.scale.linear()
 	.domain([0,146])
-    .range(["#ffff33", "#008ae6"]);
-	//.range(["#ffff33", "#e65c00"]);//red, orange//
-	//.range(["#1a1aff", "#e6e600"]);//yellow, grayish-blue
+    .range(["#ffff33", "#008ae6"]);//blue and green//
+	//.range(["#ffff33", "#e65c00"]);//if you want to make the top-level colors red and orange//
+	//.range(["#1a1aff", "#e6e600"]);//for top-level colors yellow and grayish-blue//
     
 var margin = {top: 200, right: 224, bottom: 200, left: 224},
     radius = Math.min(margin.top, margin.right, margin.bottom, margin.left) - 20;
@@ -142,14 +142,13 @@ function format_description(d) {
       return  d.name + '<br>' + format_number((d.size/214) * 100) + '%';
 }
 
-//I don't like this function; need to add if else statement that prevents it when the text is on the left side of the chart
+//Rotate the labels in the left side of the ring//
 function computeTextRotation(d) {
 	var angle=(d.x +d.dx/2)*180/Math.PI - 90	
-	
 	return angle;
 }
 
-
+//Show percentages in a tooltip on mouseover//
 function mouseOverArc(d) {
 		  d3.select(this).attr("stroke","#ccc").attr("stroke-width", "2px")//add a focus stroke on the chosen chart section//
 			 
@@ -316,7 +315,5 @@ function updateArc(d) {
 }
 d3.select(self.frameElement).style("height", margin.top + margin.bottom + "px");
 
-$(".ring").click(function() {
-         $("#instructions").fadeToggle("medium", "linear");
-     });
+
 });//close document ready function

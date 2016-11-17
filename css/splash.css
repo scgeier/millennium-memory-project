@@ -1,4 +1,6 @@
+/*Splash page*/
 
+/*Website title and subtitle*/
 .splash-title-area{
     position:absolute;
     z-index:3;
@@ -39,6 +41,7 @@
     padding-left:3%;
     }
 
+/*The phone cord and wall jack*/
 #cover-illustration{
     position:absolute;
     top:5%;
@@ -60,7 +63,7 @@
     z-index:2;
 }
 
-
+/*Show Y2K compliant message and loader wheel when user enters the site*/
 #compliant-message{
     display:none;
     text-align:center;
@@ -189,7 +192,7 @@
        }
 }
 
-/*Kindle Fire, PORTRAIT; Dell PC desktops*/
+/*Kindle Fire, PORTRAIT and PC desktops*/
 @media screen and (min-width:1600px) and (max-width:1918px){
     .splash-title-area{
         top:2%;

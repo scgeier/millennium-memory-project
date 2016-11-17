@@ -1,89 +1,90 @@
 <html lang="en">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<head>
-    <title>Millennium Memory Project</title>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <head>
+  <title>Millennium Memory Project</title>
 
 <!--Boostrap CSS CDN-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Gravitas+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Gravitas+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
 <!--My CSS-->
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
-<link rel="stylesheet" type="text/css" href="css/splash.css"/> 
-</head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="css/splash.css"/> 
+ </head>
 
-<body onload="firefoxPosition();" id="splash-body">
-
-<div class="container" id="splash-container">
- <div class="row" id="compliant-message">
-  This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
- </div>
-  <div class="row" id="loader-area">
+ <body onload="firefoxPosition();" id="splash-body">
+  <div class="container" id="splash-container">
+   <div class="row" id="compliant-message">
+    This website is Y2K compliant.<span id="firefox-msg" style="display:none;"><br><br>(and it's best viewed with the latest versions of Chrome or Safari).</span>
+   </div>
+   <div class="row" id="loader-area">
     <div class="col-xs-2 col-xs-offset-5">
-        <div class="loader"></div>
+     <div class="loader"></div>
     </div>
-  </div>
+   </div>
 
 
-<div class="splash-title-area">
-   <p class="splash-title">Millennium<br>Memory<br>Project</p>
-   <p id="subtitle">a story in sound and numbers</p>
-   <p id="byline">by Scott Geier</p>
-   <p id="plug-in"><em>plug in to begin</em> <span id="pointer">☞</span></p>
-</div>
+   <div class="splash-title-area">
+    <p class="splash-title">Millennium<br>Memory<br>Project</p>
+    <p id="subtitle">a story in sound and numbers</p>
+    <p id="byline">by Scott Geier</p>
+    <p id="plug-in"><em>plug in to begin</em> <span id="pointer">☞</span></p>
+   </div>
   
- <div id="cover-illustration">
-     <img class="cord" id="draggable" src="img/neat-cord.svg" onmouseup="playSound();">
-     <img class="jack" id="droppable" src="img/phone-jack-smaller-hole.svg">
- </div>
+   <div id="cover-illustration">
+    <img class="cord" id="draggable" src="img/neat-cord.svg" onmouseup="playSound();">
+    <img class="jack" id="droppable" src="img/phone-jack-smaller-hole.svg">
+   </div>
  
    <audio id="myAudio">
     <source src="audio/click-modem-combo.mp3" type="audio/mp3">
-  </audio>
-</div>
+   </audio>
+  </div>
 
 
  
  
-<!--JQuery CDNs-->
-<script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<!--JQuery and JQuery UI-->
+ <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"> </script>
  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- <!--Touch Punch JS (allows JQuery UI drag and drop to work on mobile)-->
-<script src="js/jquery.ui.touch-punch.min.js"></script>
+<!--Touch Punch JS (allows JQuery UI drag and drop to work on mobile)-->
+ <script src="js/jquery.ui.touch-punch.min.js"></script>
 <!--Bootstrap JS CDN-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!--JQuery UI drag and drop-->
-  <script>
+
+ <script>
 //For Firefox browsers, change illustration positioning from absolute to relative (to fix JQuery draggable bug)//
-function firefoxPosition() {
+  function firefoxPosition() {
    if(navigator.userAgent.indexOf("Firefox") != -1){
         console.log("Firefox detected");
         document.getElementById("cover-illustration").style.position = "relative";
         document.getElementById("cover-illustration").style.left = "55%";
              };
-}
-  
+    }
+
+//Play the click and modem sounds when user plugs the phone cord into the wall//  
 var sound = document.getElementById("myAudio");
   $( function() {
     $('.cord').bind( "touchstart", function(e){
           console.log("getting audio");
           sound.load();
-    });
+      });
     $('.cord').bind( "touchend", function(e){
           console.log("playing audio");
           sound.play();
-    });
+      });
          
-         
+//Drag and drop the phone cord into the phone jack in the wall// 
     $( "#draggable" ).draggable();
     $( "#droppable" ).droppable({
        drop: function( event, ui ) {
         $( this )
         $( ".splash-title-area").hide();
-        $( "#cover-illustration").hide(); 
+        $( "#cover-illustration").hide(); //Hide the splash page and show the 'Y2K compliant' message after phone cord plugs in//
         $( "#compliant-message").show().delay(5000).fadeToggle(500);
           if(navigator.userAgent.indexOf("Firefox") != -1){
               document.getElementById("firefox-msg").style.display = "block";
@@ -103,5 +104,5 @@ var sound = document.getElementById("myAudio");
           sound.play();
     };
   </script>
-</body>
+ </body>
 </html>

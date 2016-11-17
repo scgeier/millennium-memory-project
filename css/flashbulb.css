@@ -1,33 +1,21 @@
-/*Flashbulb Memory and the Turn of the Millennium page*/
+/*Flashbulb Memory and the Turn of the Millennium*/
 
+/*The doughnut chart*/
 #unilevel-partition {
-		color: white;
-		font-family: sans-serif;
-		height:410px;
-		shape-outside: circle(50%);
-		-webkit-shape-outside:circle(50%);/*Safari*/
-		margin:-50px;
-		float:left;
-		/*position:absolute;
-		top:350px;
-		left:480px;*/
-		
-	}
+ color: white;
+ font-family: sans-serif;
+ height:410px;
+ shape-outside: circle(50%);
+ -webkit-shape-outside:circle(50%);/*Safari*/
+ margin:-50px;
+ float:left;	
+}
 
 .demographic-label{
 	font-size:0.75em;
 }
 	
-/*#instructions{
-	font-family:Helvetica Neue;
-	color:black;
-	font-size:0.7em;
-	position:absolute;
-	bottom:40%;
-	left:4%;
-	margin-bottom:4%;
-}*/
-
+/*Doughnut chart instructions*/
 #partition-info-button{
   cursor:pointer;
   position:absolute;
@@ -38,6 +26,7 @@
   font-size:1.5em;
 }
 
+/*Reposition the info button on desktop*/
 @media screen and (min-width:1920px) and (max-width:2299px){
    #partition-info-button{
       top:40%;  
@@ -51,6 +40,7 @@
    }
 }
 
+/*The chart instructions tooltip*/
 #partition-instructions, #mobile-partition-instructions{
   width:250px;
   padding:5px;
@@ -75,7 +65,7 @@
   color:black;
 }
 
-/*Phones*/
+/*Responsive design (Bootstrap doesn't allow for magazine-style text wraps,etc.): Phone*/
 @media only screen and (max-width: 767px)  {
    #unilevel-partition{
 	   float:none;
@@ -139,6 +129,7 @@
     cursor:pointer;
 }
 
+/*The cartoon SVG*/
 #fireworks{
 	width:35%;
 	float:right;
@@ -154,7 +145,7 @@
    }
 }
 
-
+/*Illustrator CSS for the fireworks cartoon; rename the paths in HTML and here to add easy interaction*/
 .cls-6{
 	stroke:red;
 }
