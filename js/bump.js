@@ -49,11 +49,11 @@ function init(){
   d3.json("js/bump.json", function(error, data) {
   if (error) throw error;
   
-//Set the X and Y axes using the min amd max values from the user's chosen data set//
+//Set the X and Y axes using the min amd max values from the data set//
   x.domain(d3.extent(data, function(d) { return d.age; })).nice();
   y.domain(d3.extent(data, function(d) { return d.score; })).nice();
 
-//Make the X axis and change the label according to the chosen category
+//Make the X axis//
 svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -68,7 +68,7 @@ svg.append("g")
       .style("text-anchor", "end")
       .text("Age");
 
-//Make the Y axis, with the label's content AND position a function of the data
+//Make the Y axis//
   svg.append("g")
       .attr("class", "y axis")
       .style("font-size", 11)
@@ -83,7 +83,7 @@ svg.append("g")
       .style("text-anchor", "end")
       .text("Memory Score");
 
-//Make the dots and hide the ones that have null values//
+//Make the dots//
 var dots = svg.selectAll(".dot")
       .data(data)
     .enter().append("circle")
@@ -96,7 +96,7 @@ var dots = svg.selectAll(".dot")
       .style("cursor", "pointer")
       .style("fill", function(d){return color(d.score);})
       
-//Show the tooltip on mouseover//
+//Show the tooltip on click//
       .on("click", function(d){
          //document.getElementById("article-intro").className = "fade-out";
          tooltip.transition(d)
@@ -120,18 +120,8 @@ var dots = svg.selectAll(".dot")
         elClose.onclick = function(){
           document.getElementById("selected-memory").style.opacity = "0";
         };
-      
-      /*function phoneWidth() {
-        console.log(window.innerWidth);
-        if (window.innerWidth < 767) {
-            return "90%";
-        }else if(window.innerWidth >= 768 && window.innerWidth < 1600){
-          return "40%";
-        }else{
-          return "60%";
-        }
-      }*/
-      
+        
+//Nudge the tooltip to the left on mobile//
       function phoneLeftPos() {
         if (window.innerWidth < 767) {
             return "2%";
@@ -139,12 +129,10 @@ var dots = svg.selectAll(".dot")
           return "5%";
         }
       }
-        
-      })
+      })//close onclick//
       
-//Remove tooltip on mouseout//
+//Remove tooltip on desktop mouseout//
       .on("mouseleave", function(d){
-        //document.getElementById("article-intro").className = "fade-in";
          tooltip.transition().style("opacity", 0)
          console.log("mouseout");
          document.getElementById("page-content").style.opacity = "1";

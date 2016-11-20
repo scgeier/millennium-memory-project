@@ -126,7 +126,7 @@ var projection = d3.geo.albersUsa()
 var path = d3.geo.path()
     .projection(projection);
 
-//make the SVG canvas
+//make the SVG canvas//
 var svg = d3.select("#map")
     .append("svg")
  //responsive SVG needs these 2 attributes and no width and height attr
@@ -210,11 +210,7 @@ d3.select(self.frameElement).style("height", height + "px");
 
 //Move the dots to the new location when user clicks the radio button//
 function updateData() {
-
-//VANILLA JS CODE FOR FADE-IN ON PULL QUOTE//
-//document.getElementById("msg").className = "fade-in";
-     
-  console.log("testing");
+  console.log("dots are moving!");
   
   svg.selectAll("circle")
       .transition()  // Transition from 1999 location to current 
@@ -225,17 +221,12 @@ function updateData() {
            })
       .attr("cy", function(d) {
                    return projection([d.currLon, d.currLat])[1];
-           })
-  
-    
-  //note to self:NEED TO UPDATE THE TOOLTIPS WITH CURRENT CITY//
-  
+           }) 
 }
 
 //Move the dots back to their original location when user clicks the 1999 radio button//
 function restoreData() {
-  
-  console.log("hello");
+  console.log("dots are moving back!");
   
   svg.selectAll("circle")
       .transition()  // return dots back to their 1999 positions

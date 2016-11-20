@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html>
  <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
   <title>Where We Were</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
-<link rel="stylesheet" type="text/css" href="css/map.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="css/map.css"/>
  </head>
-<body id="map-page" onload="checkSafariPhones();">
-   
- <div id="mySidenav" class="sidenav">
-  <div class="site-contents">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="intro.html">Introduction</a>
-  <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
-  <a href="bump.html">The Reminiscence Bump</a>
-  <a href="#">Where We Were</a>
-  <a href="chord.html">Who We Were With</a>
-  <a href="slidecast.html">What We Remember: A Slidecast</a>
-  <a href="interviews.html">The Time Capsule</a>
-  </div>
-  <div class="social-links">
-   <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-   <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</div>
- <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
-
-
-<div class="container" id="page-content">
-<div id="map-area">
- <div id="map" class="svg-map-container"></div>
  
- <div id="legend" class="svg-legend-container">
-  <form id="radio-options">
-  <label>Residence in:</label><br>
-  <input type="radio" name="residence" value="then" id="then" onclick="restoreData()" checked>   1999
-  <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData()">   2016
-</form>
-    <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle" aria-hidden="true"></i></span></h5>
-    <div id="map-legend-tooltip" style="display:none;">
-     <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p>The scores indicate the range of vividness in respondents' memories from the night of New Year's Eve 1999, from zero (essentially non-existent) to 17 (incredibly vivid).<br><br>Scores were averaged for cities with multiple respondents.</p>
-    </div>
- </div>
-</div>
-<div id="article-area">
- <h2 class="mmp-headline" id="map-headline">Where We Were</h2>
-<p class="article-text">Most conversations about a flashbulb memory start with the same question: “Do you remember where you were when...?” Location is crucial to the memory; the little details about your surroundings are usually what give the memory such a peculiar, autobiographical context, and they’re what make the stories so fascinating. Ask a Baby Boomer where she was when Kennedy was shot, and she’ll end up telling you about the color of the trays in her middle school cafeteria.</br><br>So for the Millennium Memory <span id="msg">New Yorkers' memories were 24% more vivid than the average</span><span id="msg2">People who have moved since 1999 scored 13% higher on the memory survey than those who've stayed put</span>Project, I wanted to know where people were when the clock struck midnight. I wanted to see it on a map, and find out if there was any correlation between the strength of the memories and where those memories were formed.<br><br>This map shows where each of the respondents to the Millennium survey lived in 1999. The color of the dots corresponds to the vividness of their memories.<br><br>New Year’s Eve in America has long been associated with New York and the ball drop in Times Square, and perhaps not surprisingly, people who were living in the New York area at the turn of the millennium have more vivid memories from that night -- 24 percent more vivid than the average, to be precise. More surprising is the fogginess of millennium memories on the West Coast; people in Los Angeles scored 21 percent <em>lower</em> on the memory survey than the overall average. Small sample size may account for much of the difference (see my Methods and Limitations).<br><br>Time zones may have also played a role. During several of my in-person interviews, people remembered watching the New Year’s celebrations on TV in earlier countries around the world to find out if the Y2K bug was wreaking havoc before it hit the United States. When they saw that Australia, for example, was doing fine, they realized it was a non-event, and the rest of the night became a blur. By the time it was midnight on the West Coast, it was old news.<br><br>Since I was already asking people where they lived in 1999, I was curious to know where they lived now. Click the 2016 button to see the results. Sixty percent of respondents have moved to another city since December 31, 1999. That group of movers scored 13 percent higher on the memory survey than the people who’ve stayed put.</p>
-</div>
-</div>
-
-<div class="container footer" id="map-footer">
-  <div class="row">
-   <div class="col-xs-1 page-number">
-    <h6>4<span class="pipe">|</span></h6>
+ <body id="map-page" onload="checkSafariPhones();">
+  <div id="mySidenav" class="sidenav">
+   <div class="site-contents">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="intro.html">Introduction</a>
+    <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+    <a href="bump.html">The Reminiscence Bump</a>
+    <a href="#">Where We Were</a>
+    <a href="chord.html">Who We Were With</a>
+    <a href="slidecast.html">What We Remember: A Slidecast</a>
+    <a href="interviews.html">The Time Capsule</a>
    </div>
-   <div class="col-xs-8 project-title">
-    <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
-   </div>
-   <div class="col-xs-3 next-page">
-    <a href="chord.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
+   <div class="social-links">
+    <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
    </div>
   </div>
- </div>
+  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+
+  <div class="container" id="page-content">
+   <div id="map-area">
+    <div id="map" class="svg-map-container"></div>
+    <div id="legend" class="svg-legend-container">
+     <form id="radio-options">
+      <label>Residence in:</label><br>
+      <input type="radio" name="residence" value="then" id="then" onclick="restoreData()" checked>   1999
+      <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData()">   2016
+     </form>
+     <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle" aria-hidden="true"></i></span></h5>
+     <div id="map-legend-tooltip" style="display:none;">
+      <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p>The scores indicate the range of vividness in respondents' memories from the night of New Year's Eve 1999, from zero (essentially non-existent) to 17 (incredibly vivid).<br><br>Scores were averaged for cities with multiple respondents.</p>
+     </div>
+    </div>
+   </div>
+  <div id="article-area">
+   <h2 class="mmp-headline" id="map-headline">Where We Were</h2>
+    <p class="article-text">Most conversations about a flashbulb memory start with the same question: “Do you remember where you were when...?” Location is crucial to the memory; the little details about your surroundings are usually what give the memory such a peculiar, autobiographical context, and they’re what make the stories so fascinating. Ask a Baby Boomer where she was when Kennedy was shot, and she’ll end up telling you about the color of the trays in her middle school cafeteria.</br><br>So for the Millennium Memory <span id="msg">New Yorkers' memories were 24% more vivid than the average</span><span id="msg2">People who have moved since 1999 scored 13% higher on the memory survey than those who've stayed put</span>Project, I wanted to know where people were when the clock struck midnight. I wanted to see it on a map, and find out if there was any correlation between the strength of the memories and where those memories were formed.<br><br>This map shows where each of the respondents to the Millennium survey lived in 1999. The color of the dots corresponds to the vividness of their memories.<br><br>New Year’s Eve in America has long been associated with New York and the ball drop in Times Square, and perhaps not surprisingly, people who were living in the New York area at the turn of the millennium have more vivid memories from that night -- 24 percent more vivid than the average, to be precise. More surprising is the fogginess of millennium memories on the West Coast; people in Los Angeles scored 21 percent <em>lower</em> on the memory survey than the overall average. Small sample size may account for much of the difference (see my Methods and Limitations).<br><br>Time zones may have also played a role. During several of my in-person interviews, people remembered watching the New Year’s celebrations on TV in earlier countries around the world to find out if the Y2K bug was wreaking havoc before it hit the United States. When they saw that Australia, for example, was doing fine, they realized it was a non-event, and the rest of the night became a blur. By the time it was midnight on the West Coast, it was old news.<br><br>Since I was already asking people where they lived in 1999, I was curious to know where they lived now. Click the 2016 button to see the results. Sixty percent of respondents have moved to another city since December 31, 1999. That group of movers scored 13 percent higher on the memory survey than the people who’ve stayed put.
+    </p>
+   </div>
+  </div>
+
+  <div class="container footer" id="map-footer">
+   <div class="row">
+    <div class="col-xs-1 page-number">
+     <h6>4<span class="pipe">|</span></h6>
+    </div>
+    <div class="col-xs-8 project-title">
+     <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
+    </div>
+    <div class="col-xs-3 next-page">
+     <a href="chord.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
+    </div>
+   </div>
+  </div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

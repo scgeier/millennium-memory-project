@@ -1,3 +1,5 @@
+//Politics chart//
+
 $(document).ready(function(){
     console.log("DOM loaded!");
     
@@ -54,11 +56,8 @@ var politicsData = [['Democrat','Acquaintance',7]
 ,['Other','Stranger',2]
 ];
 
-
 var color ={Democrat:"#3366CC", Republican:"#DC3912",  Independent:"#FF9900", Other:"#109618"};
-//var eduColor ={None:"#3366CC", HighSchool:"#DC3912", SomeCollege:"#FF9900", Associates:"#109618", Bachelors:"#990099", Graduate:"#e6e600"};
 
-//Religion chart//
 var svg = d3.select("#politicsChart").append("svg").attr("width", 645).attr("height", 480);
 var g = svg.append("g").attr("transform","translate(200,50)");
 
@@ -105,12 +104,7 @@ function mouseout(d){
 		.select(".religion-perc")
 	.text(function(d){ return d3.format("0.0%")(d.percent)})
 }
-
-
-
-
- 
-         
+        
 d3.select(self.frameElement).style("height", "500px");
 
 });//close document ready function

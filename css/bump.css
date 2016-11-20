@@ -1,4 +1,4 @@
-
+/*Customize the responsive SVG canvas for the Reminiscence Bump scatterplot chart*/
 .svg-scatterplot-container {
     display: inline-block;
     position: relative;
@@ -14,14 +14,12 @@
         }
 }
 
-#bump-article-section2-hidden{
-    display:none;
-}
 
 .tooltip{
     margin-right:2%;
 }
 
+/*The text within the tooltip*/
 #selected-memory{
     font-size:1em;
     font-family:Helvetica Neue;
@@ -53,6 +51,11 @@
    #chart{
       padding-top:12%;
     }
+}
+
+/*Combine the two parts of the article into a single column to the right of the chart on large desktops*/
+#bump-article-section2-hidden{
+    display:none;
 }
 
 @media screen and (min-width: 1920px) {

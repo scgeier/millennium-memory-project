@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width" />
-<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width" />
+ <head>
    <title>Religion Chord Diagram</title>
-<style>
-  
+  <style> 
 body{
    overflow:hidden;
 }
@@ -38,21 +37,26 @@ body{
    zoom:0.95;
 }
 
-@media screen and (min-width:275px) and (max-width: 329px)  {
+/*Change size and position of chart for different screen sizes*/
+
+@media screen and (max-width:767px)  {
     #religionChart{
 	    position:absolute;
         top:5%;
+	}
+}
+
+@media screen and (min-width:275px) and (max-width: 319px)  {
+    #religionChart{
         right:-1.5%;
         zoom:0.5;
 	}
 }
 
 
-@media screen and (min-width:330px) and (max-width: 366px)  {
+@media screen and (min-width:320px) and (max-width: 366px)  {
     #religionChart{
-	    position:absolute;
-        top:5%;
-        right:-1%;
+        right:7%;
         zoom:0.58;
     }
 }
@@ -60,14 +64,11 @@ body{
 
 @media screen and (min-width:367px) and (max-width: 415px)  {
     #religionChart{
-	    position:absolute;
-        top:5%;
-        right:2%;
+        right:9%;
         zoom:0.6;
     }
 }
-</style>
-
+ </style>
 </head>
 <body>
   

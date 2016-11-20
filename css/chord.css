@@ -8,7 +8,7 @@
   margin:5% 0 2% 12%;
 }
 
-/*The svg-responsive canvas method isn't working with this chart. Below are the media queries to fix the size and position, for each viewport*/
+/*The responsive D3 SVG canvas isn't working with this chart. Below are the media queries to fix the size and position, for each viewport*/
 
 /*for all mobile screens*/
 @media screen and (max-width: 767px)  {
@@ -24,18 +24,16 @@
     }
 }
 
-
 @media screen and (min-width:320px) and (max-width: 374px) {
     #eduChart{
-        right:-2%;
+        right:1.5%;
         zoom:0.55;
     }
-
 }
 
 @media screen and (min-width:375px) and (max-width: 413px) {
     #eduChart{
-        right:2%;
+        right:2.5%;
         zoom:0.62;
     }
 }
@@ -43,8 +41,8 @@
 
 @media screen and (min-width:414px) and (max-width: 767px) {
     #eduChart{
-        right:1%;
-        zoom:0.7;
+        right:5%;
+        zoom:0.65;
     }
 }
 
@@ -79,6 +77,7 @@
     font-family:Helvetica;
 }
 
+/*Hide the Religion and Politcs charts until user chooses them*/
 #religionChart, #politicsChart {
   display:none;
   border:none;
@@ -92,6 +91,7 @@
     padding-right:0;
 }
 
+/*Toggle the span in the instructions, so mobile users know to tap the chart, instead of hover*/
 #mobile-instructions{
     display:none;
 }
@@ -125,6 +125,7 @@
     text-align:center;
 }
 
+/*The couch SVG styles, from Illustrator (change class names for easy interactivity with individual paths)*/
 .a {
         fill: #f2f1ee;
       }

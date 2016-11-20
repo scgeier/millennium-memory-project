@@ -1,6 +1,10 @@
+/*MAIN STYLE SHEET*/
+
 .container{
     padding-top:2%;
 }
+
+/*SIDE DRAWER MENU*/
 
 .hamburger{
     float:right;
@@ -78,6 +82,7 @@
     padding-left:5px;
 }
 
+/*The project title in the footer links back to the splash page*/
 .splash-link {
     color:black;
 }
@@ -99,6 +104,7 @@
     display:none;
 }
 
+/*Methods and Limitations lightbox; might be used on multiple pages*/
 #methods{
     color:#cc0000;
 }
@@ -116,7 +122,6 @@
     width:90%;
 }
 
-
 #methods-closer{
     float:right;
     font-size:2em;
@@ -126,6 +131,8 @@
    color:#ccc;
    text-decoration:none;
 }
+
+/*Intro page*/
 
 #big-letter {
     float:left;
@@ -137,34 +144,42 @@
     margin:20px 20px 20px 0px;
 }
 
+#lead{
+    font-size:1.7em;
+}
+
 #computer-guy{
     width:40%;
     -moz-width:40%;
     float:right;
 }
 
-
+/*Phones*/
 @media screen and (max-width: 767px)  {
    #big-letter{
         font-size:10em;
         margin:10px;
     }
     
-    #computer-guy{
+   #lead{
+        font-size:1em;
+    }
+    
+   #computer-guy{
     width:60%;
     -moz-width:60%;
     float:right;
     }
     
-    .footer{
+   .footer{
         height:33px;
     }
     
-    .next-page{
+   .next-page{
     max-width:22%;
     }
     
-    #next-arrow {
+   #next-arrow {
     width:100%;
     margin-top:10%;
     margin-left:0;
@@ -186,16 +201,6 @@
     }
 }
 
-
-#lead{
-    font-size:1.7em;
-}
-
-@media screen and (max-width: 767px)  {
-   #lead{
-        font-size:1em;
-    }
-}
 
 .mmp-headline{
     font-family: 'Playfair Display SC', serif;
@@ -222,12 +227,6 @@
 }
 
 
-@media screen and (min-width:320px) and (max-width: 767px)  {
-   #computer-guy{
-        width:60%;
-    }
-}
-
 /*Kindle Fire*/
 @media screen and (min-width:1600px) and (max-width:1919px) {
     body{
@@ -242,6 +241,7 @@
     }
 }
 
+/*Responsive SVG canvases for the D3 charts*/
 .svg-container {
     display: inline-block;
     position: relative;

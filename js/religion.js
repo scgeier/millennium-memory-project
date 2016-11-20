@@ -1,3 +1,5 @@
+//Religion chart//
+
 $(document).ready(function(){
     console.log("DOM loaded!");
     
@@ -55,11 +57,8 @@ var religionData = [['Agnostic','Acquaintance',4]
 ,['Protestant','Stranger',6]
 ];
 
-
 var color ={Agnostic:"#3366CC", Atheist:"#DC3912",  Buddhist:"#FF9900", Catholic:"#109618", Protestant:"#990099"};
-//var eduColor ={None:"#3366CC", HighSchool:"#DC3912", SomeCollege:"#FF9900", Associates:"#109618", Bachelors:"#990099", Graduate:"#e6e600"};
 
-//Religion chart//
 var svg = d3.select("#religionChart").append("svg").attr("width", 645).attr("height", 480);
 var g = svg.append("g").attr("transform","translate(200,50)");
 
@@ -106,12 +105,7 @@ function mouseout(d){
 		.select(".religion-perc")
 	.text(function(d){ return d3.format("0.0%")(d.percent)})
 }
-
-
-
-
  
-         
 d3.select(self.frameElement).style("height", "500px");
 
 });//close document ready function

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width" />
-<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width" />
+ <head>
    <title>Politics Chord Diagram</title>
 <style>
-  
 body{
    overflow:hidden;
 }
+
 .mainBars rect{
   shape-rendering: auto;
   fill-opacity: 0;
@@ -16,9 +16,11 @@ body{
   stroke: rgb(0, 0, 0);
   stroke-opacity: 0;
 }
+
 .subBars{
 	shape-rendering:crispEdges;
 }
+
 .edges{
 	stroke:none;
 	fill-opacity:0.5;
@@ -38,20 +40,24 @@ body{
    zoom:0.95;
 }
 
-@media screen and (min-width:275px) and (max-width: 329px)  {
+/*Change size and position of chart for different screen sizes*/
+@media screen and (max-width: 767px)  {
     #politicsChart{
 	    position:absolute;
         top:5%;
+	}
+}
+
+@media screen and (min-width:275px) and (max-width: 319px)  {
+    #politicsChart{
         right:-1.5%;
         zoom:0.5;
 	}
 }
 
-@media screen and (min-width:330px) and (max-width: 366px)  {
+@media screen and (min-width:320px) and (max-width: 366px)  {
     #politicsChart{
-	    position:absolute;
-        top:5%;
-        right:-1%;
+        right:7%;
         zoom:0.58;
     }
 }
@@ -59,27 +65,20 @@ body{
 
 @media screen and (min-width:367px) and (max-width: 415px)  {
     #politicsChart{
-	    position:absolute;
-        top:5%;
-        right:2%;
+        right:9%;
         zoom:0.6;
     }
 }
 </style>
-
-</head>
+ </head>
 <body>
-  
-
-
  <div id="politicsChart"></div>
 
 
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="http://vizjs.org/viz.v1.1.1.min.js"></script>
-<script src="js/politics.js"></script>
-
-</body>
+ <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+ <script src="https://d3js.org/d3.v4.min.js"></script>
+ <script src="http://vizjs.org/viz.v1.1.1.min.js"></script>
+ <script src="js/politics.js"></script>
+ </body>
 </html>
