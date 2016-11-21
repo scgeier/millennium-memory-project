@@ -12,15 +12,21 @@
 
  <body>
   <div id="mySidenav" class="sidenav">
-   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <a href="intro.html">Introduction</a>
-   <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
-   <a href="bump.html">The Reminiscence Bump</a>
-   <a href="map.html">Where We Were</a>
-   <a href="chord.html">Who We Were With</a>
-   <a href="slidecast.html">What We Remember: A Slidecast</a>
-   <a href="interviews.html">The Time Capsule</a>
+   <div class="site-contents">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="intro.html">Introduction</a>
+    <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+    <a href="bump.html">The Reminiscence Bump</a>
+    <a href="map.html">Where We Were</a>
+    <a href="chord.html">Who We Were With</a>
+    <a href="slidecast.html">What We Remember: A Slidecast</a>
+    <a href="interviews.html">The Time Capsule</a>
   </div>
+ <div class="social-links">
+   <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+   <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+ </div>
   <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
 
  <div class="container">
@@ -192,7 +198,7 @@
   </g>
 </svg>
     <div id="screen">
-     <iframe id="vimeo-slidecast" src="https://player.vimeo.com/video/190618162" width="512" height="288" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+     <iframe class="vimeo-iframe" id="vimeo-slidecast" src="https://player.vimeo.com/video/190618162" width="512" height="288" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
      </div>
    </div><!--close slidecast wrapper-->
     
@@ -244,25 +250,25 @@ console.log(window.innerWidth);
 </script>
 <script>
 //Vimeo player with custom controls in the VCR illustration//
-    var iframe = document.querySelector('iframe');
-    var player = new Vimeo.Player(iframe);
-    player.portrait = false;
+
+    var idPlayer = new Vimeo.Player("vimeo-slidecast");
+    idPlayer.portrait = false;
     var vid = document.getElementById("vimeo-slidecast");
     
     function playVid() {
-             player.play();
+             idPlayer.play();
              if (window.innerWidth < 1024) {
                 alert("Your mobile OS requires you to tap the icon in the TV screen to play the video.");//Vimeo embeds can't be triggered by custom click events in iOS//
              }
           };
           
     function pauseVid() {
-            player.pause();
+            idPlayer.pause();
           };
-    player.on('play', function() {
+    idPlayer.on('play', function() {
         console.log('played the video!');
     });
-    player.getVideoTitle().then(function(title) {
+    idPlayer.getVideoTitle().then(function(title) {
         console.log('title:', title);
     });
 </script>
