@@ -1,5 +1,6 @@
 
-/*THE INTERVIEW AUDIO TABLE*/
+/*THE ORAL HISTORY INTERVIEWS PAGE*/
+
 #quote-illustration-area{
   font-size:1.1em;
   height:300px;
@@ -18,7 +19,7 @@
     font-weight:700;
 }
 
-/*Add a fade-in/fade-out on the pull quotes...this is glitchy*/
+/*FadeToggle the interview pull quotes as user hovers over the table rows*/
 
 .animate{
     font-size:1.em;
@@ -64,6 +65,7 @@
 .header{
   border:none;
 }
+
 /*VANILLA JS CODE FOR FADE-OUT ON DEFAULT INTRO PULL QUOTE*/
 @keyframes fadeOut {
   to {
@@ -88,18 +90,13 @@
     height:20px;
 }
 
-
 #interviews-article{
   line-height:1.3em;
   margin-top:5%;
 }
 
-#interviews-header, .table-content{
-  margin-top:5%;
-}
 
-
-.test{
+#interviews-big-letter{
     font-size:5em;
     font-family:Bookman;
 }
@@ -119,7 +116,7 @@ audio {
   }
 }
 
-
+/*SVG path names from Illustrator. Change the names to make the paths easily accesible in the DOM*/
       .a {
         fill: none;
       }
@@ -147,16 +144,18 @@ audio {
 
 @media screen and (min-width:320px) and (max-width:1023px){
 
-#desktop-content{
+ #desktop-content{
   padding:5%;
-}
+ }
 
-#quote-illustration-area{
+ #quote-illustration-area{
   display:none;
-}
-#mobile-open-instructions{
+ }
+ 
+ #mobile-open-instructions{
   display:inline;
-}
+ }
+ 
  #mobile-table-button{
     display:block;
     width:60%;
@@ -164,26 +163,27 @@ audio {
     float:right;
       }
       
-#mobile-table-intro{
+ #mobile-table-intro{
   display:inline;
   font-family:Helvetica Neue;
   font-weight:200;
 }
 
-tr{
+ tr{
   margin:0;
-}
+  }
 
 .interviews-search{
   width:90%;
   margin-top:5%;
   float:left;
 }
+
  #table-content{
     display:none;
     height:100%;
  }
- 
+/*Remove two of the table columns on mobile*/
  .location, .transcript, #audio-header{
   display:none;
  }
