@@ -101,7 +101,7 @@ function mouseover(d){
 function mouseout(d){
 	bp.mouseout(d);
 	g.selectAll(".mainBars")
-		.select(".religion-perc")
+		.select(".perc")
 	.text(function(d){ return d3.format("0.0%")(d.percent)})
 }
         
