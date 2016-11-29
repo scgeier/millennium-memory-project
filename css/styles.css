@@ -122,6 +122,10 @@
     width:90%;
 }
 
+#survey-link{
+color:#cc0000;
+}
+
 #methods-closer{
     float:right;
     font-size:2em;
@@ -136,7 +140,7 @@
 
 #big-letter {
     float:left;
-    font-size:20em;
+    font-size:12em;
     font-family:Garamond;
     line-height:50%;
     shape-outside:circle(50%);
@@ -157,7 +161,7 @@
 /*Phones*/
 @media screen and (max-width: 767px)  {
    #big-letter{
-        font-size:10em;
+        font-size:7em;
         margin:10px;
     }
     
