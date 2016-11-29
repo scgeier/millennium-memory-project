@@ -53,6 +53,12 @@
     margin-top:25%;
 }
 
+@media screen and (max-width:767px){
+    .social-links{
+      margin-top:5%;
+     }
+}
+
 .facebook{
     margin:10% 0% 0% 14%;
     border-radius:20%;
