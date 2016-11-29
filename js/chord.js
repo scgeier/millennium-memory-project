@@ -2,7 +2,7 @@ $(document).ready(function(){
     console.log("DOM loaded!");
 
 
-var educationData = [['None','Significant other',1]
+var educationData = [['None','Significant Other',1]
 ,['HighSchool','Acquaintance',4]
 ,['HighSchool','Child',6]
 ,['HighSchool','Classmate',2]
