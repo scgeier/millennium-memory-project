@@ -1,0 +1,76 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Gravitas+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/> 
+ </head>
+
+<body>
+ <div class="page-fade-in">
+  <div id="mySidenav" class="sidenav">
+   <div class="site-contents">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="intro.html">Introduction</a>
+    <a href="flashbulb.html">Flashbulb Memory and The Turn of the Millennium</a>
+    <a href="bump.html">The Reminiscence Bump</a>
+    <a href="map.html">Where We Were</a>
+    <a href="chord.html">Who We Were With</a>
+    <a href="slidecast.html">What We Remember: A Slidecast</a>
+    <a href="interviews.html">The Time Capsule</a>
+    <p class="divider">---------------</p>
+   </div>
+  <div class="social-links">
+   <a href="#">About the Author</a>
+   <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+   <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+ </div>
+ <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+
+ <div class="container" id="page-content">
+  <div class="row">
+   <div class="col-xs-12">
+    <div class="article">
+     <p class="article-text" id="bio">I'm a private investigator and freelance journalist, specializing in interactive multimedia. <img id="self-portrait" src="/img/self-portrait.svg"/>I like stories about questions that haven't been answered and answers that haven't been questioned. The Millennium Memory Project was my master's thesis at the University of North Carolina at Chapel Hill School of Media and Journalism. I'm still putting the finishing touches on my portfolio website. If you want to get in touch with me in the meantime, just send me an email or tweet.<br><br><b>Scott Geier</b><br>scgeier@gmail.com<br>@sc_geier
+     </p>
+    </div>
+   </div>
+  </div>
+ </div>
+ 
+</div>
+ 
+<!--JQuery CDN-->
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous">  </script>
+<!--Bootstrap JS CDN-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+   function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("page-content").style.opacity = "0.1";
+    }
+
+   function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("page-content").style.opacity = "1";
+    }
+
+   function playAudio() {
+    var sound = document.getElementById("modem");
+       sound.play();
+    }
+  </script>
+  <script>
+   $( document ).ready(function() {
+    console.log( "ready!" );
+    $( ".page-fade-in").fadeToggle(500);
+    });
+  </script>
+ </body>
+</html>

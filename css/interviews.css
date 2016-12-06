@@ -1,6 +1,11 @@
 
 /*THE ORAL HISTORY INTERVIEWS PAGE*/
 
+.interviews-fade{
+  opacity:1;
+  transition:1s;
+}
+
 #quote-illustration-area{
   font-size:1.1em;
   height:300px;

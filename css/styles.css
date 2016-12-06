@@ -49,8 +49,13 @@
     margin-left: 50px;
 }
 
+.divider{
+    color:#eeeeee;
+    padding-left:32px;
+}
+
 .social-links{
-    margin-top:25%;
+    margin-top:10%;
 }
 
 @media screen and (max-width:767px){
@@ -106,7 +111,7 @@
     margin-left:80%;
 }
 
-#page-fade-in {
+.page-fade-in {
     display:none;
 }
 
@@ -265,4 +270,25 @@ color:#cc0000;
     position: absolute;
     top: 10px;
     left: 0;
+}
+
+/*About the Author page*/
+
+#self-portrait{
+    width:20%;
+    float:right;
+    margin-right:5%;
+}
+
+#bio{
+    margin:5%;
+}
+
+@media screen and (max-width:767px){
+    #self-portrait{
+        width:40%;
+    }
+    #bio{
+        margin:2%;
+    }
 }

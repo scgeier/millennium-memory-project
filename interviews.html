@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/interviews.css"/>
  </head>
     
- <body>
+ <body id="interviews-page" style="opacity:0;" onload="pageFadeIn();">
   <div id="mySidenav" class="sidenav">
    <div class="site-contents">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -21,8 +21,10 @@
     <a href="chord.html">Who We Were With</a>
     <a href="slidecast.html">What We Remember: A Slidecast</a>
     <a href="#">The Time Capsule</a>
+    <p class="divider">---------------</p>
    </div>
    <div class="social-links">
+    <a href="about.html">About the Author</a>
     <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
    </div>
@@ -186,6 +188,11 @@
  <script type="text/javascript" src="js/app.js"></script>
  <script type="text/javascript" src="js/interviews.js"></script>
  <script>
+  function pageFadeIn() {
+    document.getElementById("interviews-page").style.opacity = 1;
+    document.getElementById("interviews-page").style.transition = "all .5s";
+  }
+  
 //Hide the intro pull quote when the user mouses over the others//
  function hideDefault() {
     document.getElementById("default-quote").className = "fade-out";
