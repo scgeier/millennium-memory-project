@@ -8,6 +8,16 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   <link rel="stylesheet" type="text/css" href="css/interviews.css"/>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88591450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
  </head>
     
  <body id="interviews-page" style="opacity:0;" onload="pageFadeIn();">
@@ -25,11 +35,11 @@
    </div>
    <div class="social-links">
     <a href="about.html">About the Author</a>
-    <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <iframe onclick="ga('send', 'social', 'Facebook', 'like', 'http://www.millenniummemory.com/interviews.html');" class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false" onclick="ga('send', 'social', 'Twitter', 'tweet', 'http://www.millenniummemory.com/interviews.html');">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
    </div>
   </div>
-  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav(); ga('send', 'event', 'Button', 'Click', 'Hamburger');">&#9776</span>
 
  <div class="container" id="desktop-content" ng-controller="InterviewsController as intCtrl">
   <div class="row">
@@ -135,7 +145,7 @@
     <p id="mobile-table-intro">Interview transcripts are available in the desktop version of this website.</p>
 <!--search bar---> 
     <form class="interviews-search" role="search">
-     <input type="text" class="form-control" placeholder="Search the archive (e.g, Y2K, dial-up)" ng-model="terms">
+     <input type="text" class="form-control" placeholder="Search the archive (e.g, Y2K, dial-up)" ng-model="terms" onclick="ga('send', 'event', 'Search', 'Click', 'Archive Search');">
     </form>
  
     <table class="table table-hover">
@@ -155,8 +165,8 @@
         <td>{{interview.first}}</td>
         <td>{{interview.age}}</td>
         <td class="location">{{interview.interviewLocation}}</td>
-        <td class="transcript"><a href="/{{interview.transcript}}" target="_blank"><img src="img/adobe-icon.png" class="pdf-icon"/></a></td>
-        <td><audio id="test" src="{{interview.audio}}"controls preload="metadata"></audio></td>
+        <td class="transcript"><a href="/{{interview.transcript}}" target="_blank" onclick="ga('send', 'event', 'Button', 'Click', 'Transcript');"><img src="img/adobe-icon.png" class="pdf-icon"/></a></td>
+        <td><audio id="test" src="{{interview.audio}}"controls preload="metadata" onclick="ga('send', 'event', 'Audio', 'Play', 'Interview');"></audio></td>
       </tr>
     </table>
    </div><!--close table area col-->
@@ -164,7 +174,7 @@
 
   <div class="row">
    <div class="col-xs-12">
-    <p class="article-text" id="interviews-article">I’ve always been fascinated with time capsules. I wish there were thousands of them, from different eras, stashed all over the place, and we were digging them up accidentally in our backyards when planting azaleas.<img id="mobile-table-button" src="img/time-capsule.svg" onclick="showTable();"><br><br>Time capsules – the good ones, at least -- have the intrigue of a candid street photograph. They are not exhibits in a history museum, or aisles in an antique store; they are not curated. They are full of ephemeral and imperfect details, and these details make the past a real and living thing. What draws your eye first when you open the rusty box in the cornerstone at old city hall? The letter from the mayor or the third-grader’s drawing of her cat?<br><br>At its heart, this project was meant to be a work of journalism; a singular, non-fiction story about our memories from the turn of the millennium. But I didn’t want it to end up as a letter from the mayor. There were too many good cat drawings along the way.<br><br>So I decided to make an <span id="desktop-capsule-text">audio time capsule </span><a href="#table-content" id="mobile-capsule-text" onclick="showTable();">audio time capsule</a> and put everything I gathered into one place, unedited, unadorned, with transcripts.<br><br>Now, I’m fully aware that the container for this time capsule  -- a website -- is just like the rusty box. One day, it will probably be as much an artifact as the information it contains, and there may be no way to open it. But with a little luck, it will be there, in some form, for edification and enjoyment at the turn of the next millennium, in the year 3000.<br><br>Of course, the robots may have better things to do.</p>
+    <p class="article-text" id="interviews-article">I’ve always been fascinated with time capsules. I wish there were thousands of them, from different eras, stashed all over the place, and we were digging them up accidentally in our backyards when planting azaleas.<img id="mobile-table-button" src="img/time-capsule.svg" onclick="showTable(); ga('send', 'event', 'Drawing', 'Click', 'Time Capsule');"><br><br>Time capsules – the good ones, at least -- have the intrigue of a candid street photograph. They are not exhibits in a history museum, or aisles in an antique store; they are not curated. They are full of ephemeral and imperfect details, and these details make the past a real and living thing. What draws your eye first when you open the rusty box in the cornerstone at old city hall? The letter from the mayor or the third-grader’s drawing of her cat?<br><br>At its heart, this project was meant to be a work of journalism; a singular, non-fiction story about our memories from the turn of the millennium. But I didn’t want it to end up as a letter from the mayor. There were too many good cat drawings along the way.<br><br>So I decided to make an <span id="desktop-capsule-text">audio time capsule </span><a href="#table-content" id="mobile-capsule-text" onclick="showTable(); ga('send', 'event', 'Word Link', 'Click', 'Time Capsule');">audio time capsule</a> and put everything I gathered into one place, unedited, unadorned, with transcripts.<br><br>Now, I’m fully aware that the container for this time capsule  -- a website -- is just like the rusty box. One day, it will probably be as much an artifact as the information it contains, and there may be no way to open it. But with a little luck, it will be there, in some form, for edification and enjoyment at the turn of the next millennium, in the year 3000.<br><br>Of course, the robots may have better things to do.</p>
    </div>
   </div>
  </div><!--close desktop container-->
@@ -175,7 +185,7 @@
     <h6>7<span class="pipe">|</span></h6>
    </div>
    <div class="col-xs-10 project-title">
-    <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
+    <a href="index.html" class="splash-link" onclick="ga('send', 'event', 'Word Link', 'Click', 'Home');"><h6>Millennium Memory Project</h6></a>
    </div>
    <div class="col-xs-1 next-page">
    </div>

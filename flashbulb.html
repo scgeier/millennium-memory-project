@@ -10,6 +10,16 @@
   <link href="/css/flashbulb.css" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88591450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
  </head>
 
  <body class="page-fade-in" id="flashbulb-page">
@@ -27,25 +37,25 @@
    </div>
    <div class="social-links">
     <a href="about.html">About the Author</a>
-    <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <iframe onclick="ga('send', 'social', 'Facebook', 'like', 'http://www.millenniummemory.com/flashbulb.html');" class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false" onclick="ga('send', 'social', 'Twitter', 'tweet', 'http://www.millenniummemory.com/flashbulb.html');">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
    </div>
   </div>
-   <span class="hamburger" id="navbutton"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+   <span class="hamburger" id="navbutton"style="font-size:30px;cursor:pointer" onclick="openNav(); ga('send', 'event', 'Button', 'Click', 'Hamburger');">&#9776</span>
 
   <div class="container" id="page-content">
-   <div id="unilevel-partition" class="svg-container">
+   <div id="unilevel-partition" class="svg-container" onclick="ga('send', 'event', 'Chart', 'Click', 'Doughnut');">
    <div id="partition-instructions" style="display:none;">
     <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p id="partition-info-text">Click on the ring sections to zoom in for a breakdown by gender, race and marital status.<br><br>Click the center dot to zoom back out.</p>
    </div>
    <div id="mobile-partition-instructions" style="display:none;">
     <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p id="partition-info-text">Double-tap the ring sections to zoom in and see a breakdown by gender, race and marital status.<br><br>Tap the center dot to zoom back out.</p>
    </div>
-    <span id="partition-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle"></i></span>
+    <span id="partition-info-button" onclick="showLegendDetails(event); ga('send', 'event', 'Button', 'Click', 'Doughnut Instructions');"><i class="fa fa-info-circle"></i></span>
    </div>
    
    <h2 class="mmp-headline">Flashbulb Memory <span class="small-and"><em>and the</em></span> Turn of the Millennium</h2>
-    <p class="article-text">Let’s start with the main question, the one that set everything else in motion for this project. How many people remember the night of December 31, 1999?<br><br>The chart on this page shows the answer: 68 percent. This number seems remarkably high or low, depending on how you look at it. On the one hand, it’s been 17 years since that night; it’s impressive that more than two-thirds of people still have it etched in their minds. <span id="pull-quote"><span class="pull-quote-percent">68%</span><span class="pull-quote-text"><em>of people vividly remember New Year's Eve 1999<span id="more-button">   more</em></span></span></span><span id="more-pull-quote"><span class="pull-quote-percent">37%</span> <span class="pull-quote-text"><em>of the people in that group had never talked about that night until now.</em></span></span>On the other hand, that moment was about as momentous as you can get (it was the de facto start of a new millennium), and it was loaded with the possibility that the global infrastructure would collapse because of the Y2K bug; it’s remarkable that 32 percent of people have forgotten it.</br><br>The results also revealed some interesting demographic patterns. African-Americans’ memories of New Year’s Eve 1999 were 27 percent more vivid than the average (they scored an average 12.5 on the survey, compared to the overall average of 9.86). Asian-Americans sat on the other end of the spectrum; their memory scores were 28 percent below the overall number.</br></br>Some of this could be attributed to small sample size (please see my <a href="#methods-top"><span id="methods" onclick="showMethods()">Methods and Limitations</span></a> for details). However, it also makes sense that Asian-Americans would have less vivid memories of December 31, 1999, considering that many of them celebrate the Chinese New Year on another date in the calendar.
+    <p class="article-text">Let’s start with the main question, the one that set everything else in motion for this project. How many people remember the night of December 31, 1999?<br><br>The chart on this page shows the answer: 68 percent. This number seems remarkably high or low, depending on how you look at it. On the one hand, it’s been 17 years since that night; it’s impressive that more than two-thirds of people still have it etched in their minds. <span id="pull-quote"><span class="pull-quote-percent">68%</span><span class="pull-quote-text"><em>of people vividly remember New Year's Eve 1999<span id="more-button" onclick="ga('send', 'event', 'Word Link', 'Click', 'Pull Quote More');">   more</em></span></span></span><span id="more-pull-quote"><span class="pull-quote-percent">37%</span> <span class="pull-quote-text"><em>of the people in that group had never talked about that night until now.</em></span></span>On the other hand, that moment was about as momentous as you can get (it was the de facto start of a new millennium), and it was loaded with the possibility that the global infrastructure would collapse because of the Y2K bug; it’s remarkable that 32 percent of people have forgotten it.</br><br>The results also revealed some interesting demographic patterns. African-Americans’ memories of New Year’s Eve 1999 were 27 percent more vivid than the average (they scored an average 12.5 on the survey, compared to the overall average of 9.86). Asian-Americans sat on the other end of the spectrum; their memory scores were 28 percent below the overall number.</br></br>Some of this could be attributed to small sample size (please see my <a href="#methods-top"><span id="methods" onclick="showMethods(); ga('send', 'event', 'Word Link', 'Click', 'Methods');">Methods and Limitations</span></a> for details). However, it also makes sense that Asian-Americans would have less vivid memories of December 31, 1999, considering that many of them celebrate the Chinese New Year on another date in the calendar.
 
 <!--Use complete SVG code from Illustrator to allow for interaction with individual paths in the cartoon-->
    <svg id="fireworks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.85 259.79">
@@ -180,10 +190,10 @@ The reason for the more vivid memories among African-Americans is less clear. Du
      <h6>2<span class="pipe">|</span></h6>
     </div>
     <div class="col-xs-8 project-title">
-     <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
+     <a href="index.html" class="splash-link" onclick="ga('send', 'event', 'Word Link', 'Click', 'Home');"><h6>Millennium Memory Project</h6></a>
     </div>
     <div class="col-xs-3 next-page">
-     <a href="bump.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
+     <a href="bump.html" onclick="ga('send', 'event', 'Button', 'Click', 'Next Button');"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
     </div>
    </div>
   </div>

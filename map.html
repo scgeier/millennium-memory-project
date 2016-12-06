@@ -8,6 +8,16 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   <link rel="stylesheet" type="text/css" href="css/map.css"/>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88591450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
  </head>
  
  <body class="page-fade-in" id="map-page" onload="checkSafariPhones();">
@@ -25,11 +35,11 @@
    </div>
    <div class="social-links">
     <a href="about.html">About the Author</a>
-    <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <iframe onclick="ga('send', 'social', 'Facebook', 'like', 'http://www.millenniummemory.com/map.html');" class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false" onclick="ga('send', 'social', 'Twitter', 'tweet', 'http://www.millenniummemory.com/map.html');">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
    </div>
   </div>
-  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav(); ga('send', 'event', 'Button', 'Click', 'Hamburger');">&#9776</span>
 
   <div class="container" id="page-content">
    <div id="map-area">
@@ -37,10 +47,10 @@
     <div id="legend" class="svg-legend-container">
      <form id="radio-options">
       <label>Residence in:</label><br>
-      <input type="radio" name="residence" value="then" id="then" onclick="restoreData()" checked>   1999
-      <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData()">   2016
+      <input type="radio" name="residence" value="then" id="then" onclick="restoreData(); ga('send', 'event', 'Button', 'Click', 'Map 1999');" checked>   1999
+      <input type="radio" name="residence" value="now" id="pullquote" onclick="updateData(); ga('send', 'event', 'Button', 'Click', 'Map 2016');">   2016
      </form>
-     <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails(event);"><i class="fa fa-info-circle" aria-hidden="true"></i></span></h5>
+     <h5 id="legend-label">Millenniun Memory Survey Score <span id="map-legend-info-button" onclick="showLegendDetails(event); ga('send', 'event', 'Button', 'Click', 'Map Details');"><i class="fa fa-info-circle" aria-hidden="true"></i></span></h5>
      <div id="map-legend-tooltip" style="display:none;">
       <span id="btn-close" onclick="closeLegendTooltip();"><i class="fa fa-times" aria-hidden="true"></i></span><p>The scores indicate the range of vividness in respondents' memories from the night of New Year's Eve 1999, from zero (essentially non-existent) to 17 (incredibly vivid).<br><br>Scores were averaged for cities with multiple respondents.</p>
      </div>
@@ -59,10 +69,10 @@
      <h6>4<span class="pipe">|</span></h6>
     </div>
     <div class="col-xs-8 project-title">
-     <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
+     <a href="index.html" class="splash-link" onclick="ga('send', 'event', 'Word Link', 'Click', 'Home');"><h6>Millennium Memory Project</h6></a>
     </div>
     <div class="col-xs-3 next-page">
-     <a href="chord.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
+     <a href="chord.html" onclick="ga('send', 'event', 'Button', 'Click', 'Next Button');"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
     </div>
    </div>
   </div>

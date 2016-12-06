@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="css/slidecast.css"/> 
+  <link rel="stylesheet" type="text/css" href="css/slidecast.css"/>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88591450-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
  </head>
 
  <body class="page-fade-in">
@@ -25,11 +35,11 @@
   </div>
  <div class="social-links">
    <a href="about.html">About the Author</a>
-   <iframe class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-   <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+   <iframe onclick="ga('send', 'social', 'Facebook', 'like', 'http://www.millenniummemory.com/slidecast.html');" class="facebook" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.millenniummemory.com&width=20&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId" width="23" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+   <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="millenniummemories" data-show-count="false" onclick="ga('send', 'social', 'Twitter', 'tweet', 'http://www.millenniummemory.com/slidecast.html');">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
  </div>
-  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav(); ga('send', 'event', 'Button', 'Click', 'Hamburger');">&#9776</span>
 
  <div class="container">
   <div class="row">
@@ -173,14 +183,14 @@
   </g>
   <g>
     <g>
-      <rect id="play-button" class="f" onclick="playVid()" x="182.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
+      <rect id="play-button" class="f" onclick="playVid(); ga('send', 'event', 'Drawing', 'Click', 'Play Button');" x="182.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
       <path d="M433.3,455l-3.93,0c-2.5,0-6.07.15-10.35.22l-3.34,0h-1.76a7.28,7.28,0,0,1-1.88-.17,5.24,5.24,0,0,1-3.89-4.2,11.11,11.11,0,0,1-.05-2c.06-2.68.08-5.44.09-8.26a6.76,6.76,0,0,1,.2-2.13,5,5,0,0,1,1-1.9,5.2,5.2,0,0,1,3.88-1.84c5.71-.09,11.42-.16,16.78-.18h2a16.21,16.21,0,0,1,2,.07,5.4,5.4,0,0,1,3.45,2,5.34,5.34,0,0,1,1.15,3.57l-.05,3.34-.14,5.85a6,6,0,0,1-.41,2.43,5.37,5.37,0,0,1-1.17,1.73,5.17,5.17,0,0,1-2.56,1.36,5.11,5.11,0,0,1-.77.09Zm0-.08.26,0a4.9,4.9,0,0,0,4.57-5.53l-.14-5.85-.05-3.34a4.73,4.73,0,0,0-1-3.09,4.63,4.63,0,0,0-2.94-1.69,15.53,15.53,0,0,0-1.9-.05h-2c-5.35,0-11.07-.09-16.78-.18a4.85,4.85,0,0,0-3.66,1.62,4.77,4.77,0,0,0-1,1.79,6.51,6.51,0,0,0-.22,2.06c0,2.81,0,5.58.09,8.26a10.86,10.86,0,0,0,.12,1.94,4.72,4.72,0,0,0,.72,1.69,4.85,4.85,0,0,0,2.85,2,6.67,6.67,0,0,0,1.73.13h1.76l3.34,0c4.28.08,7.85.2,10.35.22Z" transform="translate(-225.41 -29.51)"/>
     </g>
     <path d="M428.06,444.69a41.66,41.66,0,0,1-3.61,2.41c-.61.38-1.23.75-1.88,1.08l-1.94,1-.28.14,0-.29a33.39,33.39,0,0,0,0-4.33c-.11-1.44-.14-2.89-.17-4.33v-.64l.58.31q1.91,1,3.73,2.2c1.22.77,2.43,1.56,3.6,2.43l0,0Zm-.1,0c-1.31-.57-2.58-1.21-3.83-1.87s-2.54-1.37-3.77-2.13l.57-.33c0,1.44-.07,2.89-.17,4.33a33.4,33.4,0,0,0,0,4.33l-.26-.15,1.81-1.2c.61-.39,1.24-.74,1.87-1.09A41.92,41.92,0,0,1,428,444.66Z" transform="translate(-225.41 -29.51)"/>
   </g>
   <g>
     <g>
-      <rect id="pause-button" class="f" onclick="pauseVid()" x="230.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
+      <rect id="pause-button" class="f" onclick="pauseVid(); ga('send', 'event', 'Drawing', 'Click', 'Pause Button');" x="230.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
       <path d="M481.3,455l-3.93,0c-2.5,0-6.07.15-10.35.22l-3.34,0h-1.76a7.28,7.28,0,0,1-1.88-.17,5.24,5.24,0,0,1-3.89-4.2,11.11,11.11,0,0,1-.05-2c.06-2.68.08-5.44.09-8.26a6.76,6.76,0,0,1,.2-2.13,5,5,0,0,1,1-1.9,5.2,5.2,0,0,1,3.88-1.84c5.71-.09,11.42-.16,16.78-.18h2a16.21,16.21,0,0,1,2,.07,5.4,5.4,0,0,1,3.45,2,5.34,5.34,0,0,1,1.15,3.57l-.05,3.34-.14,5.85a6,6,0,0,1-.41,2.43,5.37,5.37,0,0,1-1.17,1.73,5.17,5.17,0,0,1-2.56,1.36,5.11,5.11,0,0,1-.77.09Zm0-.08.26,0a4.9,4.9,0,0,0,4.57-5.53l-.14-5.85-.05-3.34a4.73,4.73,0,0,0-1-3.09,4.63,4.63,0,0,0-2.94-1.69,15.53,15.53,0,0,0-1.9-.05h-2c-5.35,0-11.07-.09-16.78-.18a4.85,4.85,0,0,0-3.66,1.62,4.77,4.77,0,0,0-1,1.79,6.51,6.51,0,0,0-.22,2.06c0,2.81,0,5.58.09,8.26a10.86,10.86,0,0,0,.12,1.94,4.72,4.72,0,0,0,.72,1.69,4.85,4.85,0,0,0,2.85,2,6.67,6.67,0,0,0,1.73.13h1.76l3.34,0c4.28.08,7.85.2,10.35.22Z" transform="translate(-225.41 -29.51)"/>
     </g>
     <path d="M470.17,449.7c-1,.13-2,.19-3,.24l-.28,0v-.3c0-.83-.05-1.67-.05-2.5s.06-1.67.12-2.5.11-1.67.1-2.5,0-1.67-.09-2.5v-.19h.22q1.5-.1,3-.14h.34v.36c0,1.67.08,3.33,0,5s-.13,3.33-.33,5v0Zm0-.08c-.19-1.65-.26-3.31-.33-5s0-3.33,0-5l.35.35q-1.5,0-3-.14l.21-.21c-.05.83-.08,1.67-.09,2.5s0,1.67.1,2.5.12,1.67.12,2.5,0,1.67-.05,2.5l-.28-.28C468.16,449.44,469.14,449.49,470.13,449.62Z" transform="translate(-225.41 -29.51)"/>
@@ -190,7 +200,7 @@
     <path class="g" d="M512.5,452.75" transform="translate(-225.41 -29.51)"/>
     <path class="g" d="M532.5,452.5" transform="translate(-225.41 -29.51)"/>
     <g>
-      <rect id="full-screen-button" class="f" onclick="toggleFullScreen();" x="281.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
+      <rect id="full-screen-button" class="f" onclick="toggleFullScreen(); ga('send', 'event', 'Drawing', 'Click', 'Full Screen Button');" x="281.89" y="405.49" width="30" height="20" rx="5" ry="5"/>
       <path d="M532.3,455l-3.93,0c-2.5,0-6.07.15-10.35.22l-3.34,0h-1.76a7.28,7.28,0,0,1-1.88-.17,5.24,5.24,0,0,1-3.89-4.2,11.11,11.11,0,0,1-.05-2c.06-2.68.08-5.44.09-8.26a6.76,6.76,0,0,1,.2-2.13,5,5,0,0,1,1-1.9,5.2,5.2,0,0,1,3.88-1.84c5.71-.09,11.42-.16,16.78-.18h2a16.21,16.21,0,0,1,2,.07,5.4,5.4,0,0,1,3.45,2,5.34,5.34,0,0,1,1.15,3.57l-.05,3.34-.14,5.85a6,6,0,0,1-.41,2.43,5.37,5.37,0,0,1-1.17,1.73,5.17,5.17,0,0,1-2.56,1.36,5.11,5.11,0,0,1-.77.09Zm0-.08.26,0a4.9,4.9,0,0,0,4.57-5.53l-.14-5.85-.05-3.34a4.73,4.73,0,0,0-1-3.09,4.63,4.63,0,0,0-2.94-1.69,15.53,15.53,0,0,0-1.9-.05h-2c-5.35,0-11.07-.09-16.78-.18a4.85,4.85,0,0,0-3.66,1.62,4.77,4.77,0,0,0-1,1.79,6.51,6.51,0,0,0-.22,2.06c0,2.81,0,5.58.09,8.26a10.86,10.86,0,0,0,.12,1.94,4.72,4.72,0,0,0,.72,1.69,4.85,4.85,0,0,0,2.85,2,6.67,6.67,0,0,0,1.73.13h1.76l3.34,0c4.28.08,7.85.2,10.35.22Z" transform="translate(-225.41 -29.51)"/>
     </g>
     <path d="M519,439.55a4.34,4.34,0,0,1-2.25.37c-.37-.06-.75-.22-1.12-.25a3.44,3.44,0,0,0-1.12.11l.27-.27a6.24,6.24,0,0,1,.2,1.12,8.39,8.39,0,0,1,.06,1.13,6.6,6.6,0,0,1-.48,2.25h-.1a6.6,6.6,0,0,1-.48-2.25,8.39,8.39,0,0,1,.06-1.12,6.24,6.24,0,0,1,.2-1.12l.08-.32.19,0a3.44,3.44,0,0,0,1.12.11c.38,0,.75-.19,1.13-.25a4.34,4.34,0,0,1,2.25.37Z" transform="translate(-225.41 -29.51)"/>
@@ -199,7 +209,7 @@
     <path d="M529.55,446a4.34,4.34,0,0,1,.37,2.25c-.06.38-.22.75-.25,1.13a3.44,3.44,0,0,0,.11,1.12l0,.19-.32.08a6.24,6.24,0,0,1-1.12.2,8.4,8.4,0,0,1-1.12.06,6.6,6.6,0,0,1-2.25-.48v-.1a6.6,6.6,0,0,1,2.25-.48,8.4,8.4,0,0,1,1.13.06,6.24,6.24,0,0,1,1.12.2l-.27.27a3.44,3.44,0,0,0,.11-1.12c0-.37-.19-.75-.25-1.12a4.34,4.34,0,0,1,.37-2.25Z" transform="translate(-225.41 -29.51)"/>
   </g>
 </svg>
-    <div id="screen">
+    <div id="screen" onclick="ga('send', 'event', 'Video', 'Play', 'Vimeo Embed');">
      <iframe class="vimeo-iframe" id="vimeo-slidecast" src="https://player.vimeo.com/video/190618162" width="512" height="288" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
      </div>
    </div><!--close slidecast wrapper-->
@@ -216,10 +226,10 @@
     <h6>6<span class="pipe">|</span></h6>
    </div>
    <div class="col-xs-8 project-title">
-    <a href="index.html" class="splash-link"><h6>Millennium Memory Project</h6></a>
+    <a href="index.html" class="splash-link" onclick="ga('send', 'event', 'Word Link', 'Click', 'Home');"><h6>Millennium Memory Project</h6></a>
    </div>
    <div class="col-xs-3 next-page">
-    <a href="interviews.html"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
+    <a href="interviews.html" onclick="ga('send', 'event', 'Button', 'Click', 'Next Button');"><img id="next-arrow" src="img/mmp-arrow.svg"></a>
    </div>
   </div>
  </div>
