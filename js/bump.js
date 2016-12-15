@@ -1,4 +1,3 @@
-
 var margin = {top: 20, right: 20, bottom: 30, left: 20},
     width = 768 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -103,14 +102,14 @@ var dots = svg.selectAll(".dot")
           .delay(200)
           .ease("quad-in")
           .attr("id", "selected-memory")
-          .style("opacity", .95)
+          .style("opacity", 0.95)
           .style("width", "auto")
           .style("left", phoneLeftPos)
           .style("top", (d3.event.pageY) + "px")
   
         tooltip.html("'" + "<span id='close-button'>✖</span>"  + d.memory + "'")
         
-        console.log(d.name);
+        console.log(d.memory);
         document.getElementById("page-content").style.opacity = "0.05";
         document.getElementById("bump-footer").style.opacity = "0.05";
         document.getElementById("bump-burger").style.opacity = "0.05";
@@ -118,7 +117,11 @@ var dots = svg.selectAll(".dot")
       
         var elClose = document.getElementById("close-button");
         elClose.onclick = function(){
-          document.getElementById("selected-memory").style.opacity = "0";
+          tooltip.transition()
+            .style("opacity", 0)
+          document.getElementById("page-content").style.opacity = "1";
+          document.getElementById("bump-footer").style.opacity = "1";
+          document.getElementById("bump-burger").style.opacity = "1";
         };
         
 //Nudge the tooltip to the left on mobile//
@@ -129,19 +132,9 @@ var dots = svg.selectAll(".dot")
           return "5%";
         }
       }
-      })//close onclick//
-      
-//Remove tooltip on desktop mouseout//
-      .on("mouseleave", function(d){
-         tooltip.transition().style("opacity", 0)
-         console.log("mouseout");
-         document.getElementById("page-content").style.opacity = "1";
-         document.getElementById("bump-footer").style.opacity = "1";
-         document.getElementById("bump-burger").style.opacity = "1";
       });
 
   });//close d3.json
 };//close init();
 
 init();
-

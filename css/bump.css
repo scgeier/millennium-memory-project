@@ -14,9 +14,13 @@
         }
 }
 
-
 .tooltip{
     margin-right:2%;
+    z-index:1;
+}
+
+#chart{
+    z-index:2;
 }
 
 /*The text within the tooltip*/
@@ -38,6 +42,7 @@
     float:right;
     font-size:1.3em;
     padding:0% 2% 0% 0%;
+    cursor:pointer;
 }
 
 
@@ -47,9 +52,9 @@
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width:1274px){
+@media screen and (min-width: 993px) and (max-width:1279px){
    #chart{
-      padding-top:12%;
+      padding-top:5%;
     }
 }
 
